@@ -1,28 +1,91 @@
-.App {
+h2 {
+  font-size: 1.35em;
+  line-height: 1.75em;
+}
+
+.banner {
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -moz-justify-content: center;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  cursor: default;
+  height: 100vh;
+  min-height: 35em;
+  overflow: hidden;
+  position: relative;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.banner h2 {
+  animation: fadein 0.8s;
+  display: inline-block;
+  font-size: 1.75em;
+  opacity: 1;
+  padding: 0.35em 1em;
+  position: relative;
+  z-index: 1;
+  font-weight: 800;
+  letter-spacing: 0.225em;
+  line-height: 1em;
+  margin: 0 0 1em 0;
+  text-transform: uppercase;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.banner h2:before,
+h2:after {
+  animation: expansion 0.8s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.8s;
+  background: rgb(49, 34, 34);
+  content: "";
+  display: block;
+  height: 2px;
+  position: absolute;
 }
 
-.App-title {
-  font-size: 1.5em;
+.banner h2:before {
+  top: 0;
+  left: 0;
 }
 
-.App-intro {
-  font-size: large;
+.banner h2:after {
+  bottom: 0;
+  right: 0;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.banner p {
+  animation: fadein 2s;
+  animation-delay: 1.6s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  letter-spacing: 0.225em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes expansion {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
