@@ -7,7 +7,7 @@ class App extends Component {
     return (
       <div>
         <Banner />
-
+        <div style={{height:'100vh'}}></div>
       </div>
     );
   }

@@ -1,18 +1,18 @@
 .social-icon {
-    color: white;
-    opacity: 0;
-    margin-right: 0.7em;
-    animation: fadein 0.5s;
-    animation-delay: 1.8s;
-    animation-fill-mode: forwards;
-    transition: all 0.3s ease-in-out 0s;
-    -moz-transition: all 0.3s ease-in-out 0s;
-    -webkit-transition: all 0.3s ease-in-out 0s;
-    -o-transition: all 0.3s ease-in-out 0s;
+  color: white;
+  opacity: 0;
+  margin-right: 0.7em;
+  animation: fadein 0.5s;
+  animation-delay: 1.8s;
+  animation-fill-mode: forwards;
 }
 
 .social-icons a:hover {
-    opacity: 0.6;
+  opacity: 0.6;
+  transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -o-transition: all 0.4s ease-in-out 0s;
 }
 
 /* .social-icon.wordpress:hover{
