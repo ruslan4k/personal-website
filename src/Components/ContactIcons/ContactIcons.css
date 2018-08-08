@@ -1,0 +1,33 @@
+.social-icon {
+    color: white;
+    opacity: 0;
+    margin-right: 0.7em;
+    animation: fadein 0.5s;
+    animation-delay: 1.8s;
+    animation-fill-mode: forwards;
+    transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
+}
+
+.social-icons a:hover {
+    opacity: 0.6;
+}
+
+/* .social-icon.wordpress:hover{
+    color: #21759b;
+}
+
+.social-icon.gmail:hover{
+    color: #EA4335;
+}
+
+.social-icon.linkedIn:hover{
+    color: #4875B4
+}
+
+.social-icon.github:hover{
+    color: #333;
+
+} */
