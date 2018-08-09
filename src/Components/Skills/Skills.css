@@ -1,0 +1,56 @@
+.skill-icon {
+    color: white;
+    opacity: 0;
+    margin-right: 0.7em;
+    animation: fadein 0.5s;
+    animation-delay: 1.8s;
+    animation-fill-mode: forwards;
+  }
+  
+  .skill-icons a:hover {
+    transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -o-transition: all 0.4s ease-in-out 0s;
+  }
+  
+  .skill-icon.angular{
+    color: #ff0004;
+}
+.skill-icon.react{
+    color: #008cff;
+}
+
+.skill-icon.html{
+    color: #ff6600;
+}
+
+.skill-icon.node{
+    color: #6cc24a;
+}
+
+.skill-icon.js{
+    color: #f7df1e;
+    background: white;
+}
+
+
+
+
+  /* .skill-icon.angular:hover{
+      color: #21759b;
+  }
+  
+  .skill-icon.gmail:hover{
+      color: #EA4335;
+  }
+  
+  .skill-icon.linkedIn:hover{
+      color: #4875B4
+  }
+  
+  .skill-icon.github:hover{
+      color: #333;
+  
+  } */
+  

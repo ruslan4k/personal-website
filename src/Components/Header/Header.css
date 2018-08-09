@@ -1,0 +1,78 @@
+/* .navbar {
+     background-color: rgb(255, 255, 255);
+     background-color: rgba(255, 255, 255, 0.6);
+     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+    min-height: 70px;
+    text-align: center;
+} */
+
+.navbar {
+  /* Fallback for web browsers that don't support RGBa */
+  background-color: rgb(0, 0, 0);
+  /* RGBa with 0.6 opacity */
+  background-color: rgba(0, 0, 0, 0.6);
+  /* For IE 5.5 - 7*/
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+  /* For IE 8*/
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+  min-height: 70px;
+  text-align: center;
+}
+
+.navbar-nav {
+  flex-direction: row;
+}
+
+.navbar.transparent {
+  background: transparent;
+}
+
+/* .navbar a {
+    font-size: 1.5em;
+    color: black;
+    text-decoration: none;
+    margin-right: 2.5em;
+} */
+
+.navbar li {
+  margin-right: 2.5em;
+}
+
+.navbar a {
+  font-size: 1.5em;
+  color: white;
+  text-decoration: none;
+}
+
+li:nth-last-child(1) {
+  margin-right: 0;
+}
+
+.navbar.transparent a {
+  color: white;
+}
+
+.navbar a:hover {
+  opacity: 0.4;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 1024px) {
+  .navbar-nav {
+    font-size: 0.8em;
+  }
+  .list-container {
+      margin: auto;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 1024px) {
+  .navbar-nav {
+    font-size: 1.75em;
+  }
+  .list-container {
+    margin-left: auto;
+}
+}

@@ -1,6 +1,6 @@
 import React from "react";
 import "./ContactIcons.css";
-import GmailIcon from "mdi-react/GmailIcon";
+// import GmailIcon from "mdi-react/GmailIcon";
 import LinkedInIcon from "mdi-react/LinkedinBoxIcon";
 import WordpressIcon from "mdi-react/WordpressIcon";
 import Github from "mdi-react/GithubCircleIcon";

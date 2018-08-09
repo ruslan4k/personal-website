@@ -1,9 +1,16 @@
-.banner {
+.banner-container {
   background-attachment: fixed;
-  background-image: url('../../assets/image2.jpg');
+  background-image: url("../../assets/image2.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  animation: blur 0.8s;
+}
+
+.banner {
+  width: auto;
+  max-width: 60%;
+  margin: 0 auto 0 auto;
   color: #fff;
   display: -moz-flex;
   display: -webkit-flex;
@@ -23,13 +30,12 @@
   overflow: hidden;
   position: relative;
   text-align: center;
+  animation: blur 2s;
 }
 
 .banner h2 {
-  font-size: 1.35em;
   animation: fadein 1.5s;
   display: inline-block;
-  font-size: 1.75em;
   opacity: 1;
   padding: 0.35em 1em;
   position: relative;
@@ -73,11 +79,40 @@ h2:after {
   font-size: 1.2em;
 }
 
+.inner {
+  width: 60%;
+  text-align: center;
+}
+
 @keyframes expansion {
   from {
     width: 0;
   }
   to {
     width: 100%;
+  }
+}
+
+@keyframes blur {
+  0%,
+  100% {
+    -webkit-filter: blur(0px);
+  }
+  50% {
+    -webkit-filter: blur(10px);
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .banner h2 {
+    font-size: 1.3em;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .banner h2 {
+    font-size: 1.75em;
   }
 }
