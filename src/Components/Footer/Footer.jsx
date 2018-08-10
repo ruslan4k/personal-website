@@ -1,8 +1,6 @@
 import React from "react";
 import LinkedInIcon from "mdi-react/LinkedinBoxIcon";
-import WordpressIcon from "mdi-react/WordpressIcon";
 import Github from "mdi-react/GithubCircleIcon";
-import CodepenIcon from "mdi-react/CodepenIcon";
 import GmailIcon from "mdi-react/GmailIcon";
 import "./Footer.css";
 
@@ -21,6 +19,12 @@ export default function Footer() {
         <Github size={36} className="social-icon github" />
       </a>
       <p>View me on GitHub</p>
+      <a href="#">
+        <h1>Hire me</h1>
+      </a>
+      <a href="#">
+        <h1>Contact me</h1>
+      </a>
       <h4>Copyright © 2018 Ruslan Khametov.</h4>
     </div>
   );
