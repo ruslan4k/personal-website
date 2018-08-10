@@ -57,22 +57,22 @@ li:nth-last-child(1) {
   opacity: 0.4;
 }
 
-/* Extra small devices (phones, 600px and down) */
+/* Extra small devices (phones, 1024 and down) */
 @media only screen and (max-width: 1024px) {
   .navbar-nav {
     font-size: 0.8em;
   }
   .list-container {
-      margin: auto;
+    margin: auto;
   }
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Small devices (portrait tablets and large phones, 1024 and up) */
 @media only screen and (min-width: 1024px) {
   .navbar-nav {
     font-size: 1.75em;
   }
   .list-container {
     margin-left: auto;
-}
+  }
 }
