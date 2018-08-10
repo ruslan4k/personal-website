@@ -1,0 +1,10 @@
+.portfolio-container {
+    min-height: 100vh;
+    color: black;
+    text-align: center;
+}
+
+.portfolio-picture {
+    height: 350px;
+    width: 350px;
+}

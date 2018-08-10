@@ -1,5 +1,4 @@
 .skills-container {
-  height: 100vh;
   background: linear-gradient(
     to bottom,
     #161616 0%,
@@ -8,6 +7,12 @@
   );
   margin-top: 0;
   text-align: center;
+  cursor: default;
+  color: white;
+  min-height: 100vh;
+}
+
+.skill-icons {
   display: -moz-flex;
   display: -webkit-flex;
   display: -ms-flex;
@@ -20,8 +25,6 @@
   -webkit-justify-content: center;
   -ms-justify-content: center;
   justify-content: center;
-  cursor: default;
-  height: 100vh;
 }
 
 /* Extra small devices (phones, 600px and down) */
