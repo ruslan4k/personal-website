@@ -5,6 +5,7 @@
 }
 
 .portfolio-picture {
-    height: 350px;
+    height: auto;
     width: 350px;
+    max-width: 90%;
 }

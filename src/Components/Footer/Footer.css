@@ -1,3 +1,7 @@
 .footer-container {
     background: gray;
 }
+
+.text-self-centered {
+    margin: auto 0
+}

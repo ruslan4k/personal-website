@@ -7,25 +7,61 @@ import "./Footer.css";
 export default function Footer() {
   return (
     <div className="footer-container">
-      <a target="blank" href="https://www.linkedin.com/in/ruslan-khametov/">
-        <GmailIcon size={36} className="social-icon linkedIn" />
-      </a>
-      <p>Contact me via email</p>
-      <a target="blank" href="https://www.linkedin.com/in/ruslan-khametov/">
-        <LinkedInIcon size={36} className="social-icon linkedIn" />
-      </a>
-      <p>View my LinkedIn profile</p>
-      <a target="blank" href="https://github.com/ruslan4k/">
-        <Github size={36} className="social-icon github" />
-      </a>
-      <p>View me on GitHub</p>
-      <a href="#">
-        <h1>Hire me</h1>
-      </a>
-      <a href="#">
-        <h1>Contact me</h1>
-      </a>
-      <h4>Copyright © 2018 Ruslan Khametov.</h4>
+      <div className="container">
+        <div className="row justify-content-center">
+          <div className="col-12 col-sm-5">
+            <div className="row justify-content-center">
+              <div className="col-3 col-sm-12 row justify-content-center justify-content-sm-start">
+                <a
+                  target="blank"
+                  href="https://www.linkedin.com/in/ruslan-khametov/"
+                >
+                  <GmailIcon size={36} className="social-icon gmail" />
+                </a>
+                <p className="d-none d-sm-block text-self-centered">
+                  Contact me via email
+                </p>
+              </div>
+
+              <div className="col-3 col-sm-12 row justify-content-center justify-content-sm-start">
+                <a
+                  target="blank"
+                  href="https://www.linkedin.com/in/ruslan-khametov/"
+                >
+                  <LinkedInIcon size={36} className="social-icon linkedIn" />
+                </a>
+                <p className="d-none d-sm-block text-self-centered">
+                  View my LinkedIn profile
+                </p>
+              </div>
+              <div className="col-3 col-sm-12 row justify-content-center justify-content-sm-start">
+                <a target="blank" href="https://github.com/ruslan4k/">
+                  <Github size={36} className="social-icon github" />
+                </a>
+                <p className="d-none d-sm-block text-self-centered">
+                  View my GitHub profile
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-12 col-sm-5 text-sm-left text-center">
+            <a href="#" className="text-white">
+              <h4>Hire me</h4>{" "}
+            </a>
+            <p className="d-none d-sm-block">Enquire about hiring me</p>
+
+            <a href="#" className="text-white">
+              <h4>Contact me</h4>{" "}
+            </a>
+            <p className="d-none d-sm-block">Send a general message</p>
+          </div>
+        </div>
+
+        <div className="text-center">
+          <h6>Copyright © 2018 Ruslan Khametov.</h6>
+        </div>
+      </div>
     </div>
   );
 }
