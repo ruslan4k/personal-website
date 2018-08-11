@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 export default function SkillContainer({ imageName, skillTitle }) {
   const folder = "logos/";
   return (
-    <div>
+    <div className="skill-container">
       <Image src={folder + imageName} className="skill-picture" />
       <p>{skillTitle}</p>
     </div>

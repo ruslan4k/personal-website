@@ -5,13 +5,13 @@ import SkillContainer from "./SkillContainer/SkillContainer";
 const LOGOS = [
   ["react.svg", "React"],
   ["angular.svg", "Angular"],
-  ["node.svg", "Node"],
-  ["mongo.svg", "MongoDB"],
   ["css.svg", "CSS"],
   ["html.png", "HTML"],
   ["redux.png", "Redux"],
   ["bootstrap.png", "Bootstrap"],
-  ["jquery.svg", "jQuery"]
+  ["node.svg", "Node"],
+  ["mongo.svg", "MongoDB"],
+  ["jquery.svg", "jQuery"],
 ];
 const IMAGE_NAME = 0;
 const SKILL_TITLE = 1;
