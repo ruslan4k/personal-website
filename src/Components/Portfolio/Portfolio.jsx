@@ -1,6 +1,6 @@
 import React from "react";
 import "./Portfolio.css";
-import activityTimerImg from "../../assets/images/projects/ActivityTimer/dayActivitiesMobile.png";
+import activityTimerImg from "../../assets/images/projects/ActivityTimer/4.png";
 import autoAppletImg from "../../assets/images/projects/autoApplet/settingsMobile_pixel_quite_black_portrait.png";
 import Modal from "../Portfolio/Modal/Modal";
 

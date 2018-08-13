@@ -24,7 +24,7 @@ export default function SkillIcons() {
         <div className="skill-icons">
           {LOGOS.map((logo, index) => (
             <SkillContainer
-              key={index}
+              key={`logo-${index}`}
               imageName={logo[IMAGE_NAME]}
               skillTitle={logo[SKILL_TITLE]}
             />

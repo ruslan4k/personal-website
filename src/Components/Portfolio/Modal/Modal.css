@@ -1,18 +1,13 @@
 .close {
-    position: absolute!important;
-    visibility: hidden!important;
+  position: absolute !important;
+  visibility: hidden !important;
 }
 
 .modal-header {
-    padding: 0;
+  padding: 0;
 }
 
-.masonry-image {
-    width: 120px;
-    height: auto;
-    display: inline;
-}
-
-.image-element-class {
-    display: inline;
+.gallery-item {
+  width: inherit;
+  height: auto;
 }

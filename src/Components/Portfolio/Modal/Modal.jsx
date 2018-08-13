@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 import "./Modal.css";
-
+import Gallery from "../Gallery/Gallery";
 
 class ModalExample extends React.Component {
   state = {
@@ -32,6 +32,7 @@ class ModalExample extends React.Component {
           className={this.props.className}
         >
           <ModalHeader toggle={this.toggle}>
+            <Gallery images={this.props.project.images}/>
           </ModalHeader>
           <ModalBody>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
