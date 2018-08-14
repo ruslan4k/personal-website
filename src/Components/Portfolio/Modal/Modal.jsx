@@ -5,12 +5,21 @@ import Gallery from "../Gallery/Gallery";
 
 class ModalExample extends React.Component {
   state = {
-    modal: false
+    modal: false,
+    isLightBoxOpen: false
   };
 
   toggle = () => {
+    // checks if child's lightbox open
+    if (this.state.isLightBoxOpen) return;
     this.setState({
       modal: !this.state.modal
+    });
+  };
+
+  changeLightBoxStatus = () => {
+    this.setState({
+      isLightBoxOpen: !this.state.isLightBoxOpen
     });
   };
 
@@ -32,7 +41,10 @@ class ModalExample extends React.Component {
           className={this.props.className}
         >
           <ModalHeader toggle={this.toggle}>
-            <Gallery images={this.props.project.images}/>
+            <Gallery
+              images={this.props.project.images}
+              changeLightBoxStatus={this.changeLightBoxStatus}
+            />
           </ModalHeader>
           <ModalBody>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do

@@ -48,19 +48,6 @@ const projects = [
   }
 ];
 
-const items = [
-  {
-    src: activityTimerImg,
-    altText: "",
-    caption: ""
-  },
-  {
-    src: autoAppletImg,
-    altText: "",
-    caption: ""
-  }
-];
-
 export default class Portfolio extends React.Component {
   state = {
     modal: false

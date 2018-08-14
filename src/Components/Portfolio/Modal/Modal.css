@@ -3,11 +3,11 @@
   visibility: hidden !important;
 }
 
-.modal-header {
-  padding: 0;
-}
-
 .gallery-item {
   width: inherit;
   height: auto;
+}
+
+.ReactModal__Overlay.ReactModal__Overlay--after-open {
+  z-index: 2000!important;
 }
