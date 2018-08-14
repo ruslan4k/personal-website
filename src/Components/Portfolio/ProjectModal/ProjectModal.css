@@ -11,3 +11,18 @@
 .ReactModal__Overlay.ReactModal__Overlay--after-open {
   z-index: 2000!important;
 }
+
+.modal-title {
+  font-weight: bold;
+  font-size: 1.5em;
+  margin: auto;
+}
+
+.modal-description {
+  font-weight: 300;
+  font-size: 1em!important;
+}
+
+.modal-header {
+  text-align: center!important;
+}

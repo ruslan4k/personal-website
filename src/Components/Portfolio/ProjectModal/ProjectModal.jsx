@@ -1,9 +1,9 @@
 import React from "react";
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
-import "./Modal.css";
+import "./ProjectModal.css";
 import Gallery from "../Gallery/Gallery";
 
-class ModalExample extends React.Component {
+class ProjectModal extends React.Component {
   state = {
     modal: false,
     isLightBoxOpen: false
@@ -24,6 +24,13 @@ class ModalExample extends React.Component {
   };
 
   render() {
+    const {
+      images,
+      title,
+      description,
+      url,
+      technologies
+    } = this.props.project;
     return (
       <div>
         <button
@@ -40,20 +47,18 @@ class ModalExample extends React.Component {
           toggle={this.toggle}
           className={this.props.className}
         >
-          <ModalHeader toggle={this.toggle}>
+          <ModalHeader toggle={this.toggle}>{title}</ModalHeader>
+          <ModalBody>{description}</ModalBody>
+          <ModalBody>
             <Gallery
-              images={this.props.project.images}
+              images={images}
               changeLightBoxStatus={this.changeLightBoxStatus}
             />
-          </ModalHeader>
-          <ModalBody>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
           </ModalBody>
           <ModalFooter>
-            <Button color="primary" onClick={this.toggle}>
-              Visit Website
-            </Button>{" "}
+            <a href={url} target="blank">
+              <Button color="primary">Visit Website</Button>{" "}
+            </a>
             <Button color="secondary" onClick={this.toggle}>
               Cancel
             </Button>
@@ -64,4 +69,4 @@ class ModalExample extends React.Component {
   }
 }
 
-export default ModalExample;
+export default ProjectModal;

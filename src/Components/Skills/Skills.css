@@ -10,7 +10,6 @@
   cursor: default;
 
   /* to make content centered in the div */
-  min-height: 100vh;
   display: -moz-flex;
   display: -webkit-flex;
   display: -ms-flex;

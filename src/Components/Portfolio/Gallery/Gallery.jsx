@@ -17,7 +17,7 @@ export default class Gallery extends React.Component {
     return images.map((image, i) => {
       return (
         <div
-          className="col-6 col-md-4 col-lg-3"
+          className="col-4 col-md-4 col-lg-3"
           key={i}
           onClick={() =>
             this.setState({ photoIndex: i, isOpen: true }, changeLightBoxStatus())

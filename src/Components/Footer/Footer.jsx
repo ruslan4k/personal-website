@@ -2,6 +2,7 @@ import React from "react";
 import LinkedInIcon from "mdi-react/LinkedinBoxIcon";
 import Github from "mdi-react/GithubCircleIcon";
 import GmailIcon from "mdi-react/GmailIcon";
+import ContactModal from '../ContactModal/ContactModal';
 import "./Footer.css";
 
 export default function Footer() {
@@ -46,14 +47,10 @@ export default function Footer() {
           </div>
 
           <div className="col-12 col-sm-5 text-sm-left text-center">
-            <a href="#" className="text-white">
-              <h4>Hire me</h4>{" "}
-            </a>
+          <ContactModal buttonLabel="Hire me" modalName='hire'/>
             <p className="d-none d-sm-block">Enquire about hiring me</p>
 
-            <a href="#" className="text-white">
-              <h4>Contact me</h4>{" "}
-            </a>
+              <ContactModal buttonLabel="Contact me" modalName='contact'/>
             <p className="d-none d-sm-block mb-0">Send a general message</p>
           </div>
         </div>
