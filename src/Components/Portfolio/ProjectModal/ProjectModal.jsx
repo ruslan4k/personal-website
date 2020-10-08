@@ -1,25 +1,27 @@
-import React from "react";
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
-import "./ProjectModal.css";
-import Gallery from "../Gallery/Gallery";
+import React from 'react';
+import {
+  Button, Modal, ModalHeader, ModalBody, ModalFooter,
+} from 'reactstrap';
+import './ProjectModal.css';
+import Gallery from '../Gallery/Gallery';
 
 class ProjectModal extends React.Component {
   state = {
     modal: false,
-    isLightBoxOpen: false
+    isLightBoxOpen: false,
   };
 
   toggle = () => {
     // checks if child's lightbox open
     if (this.state.isLightBoxOpen) return;
     this.setState({
-      modal: !this.state.modal
+      modal: !this.state.modal,
     });
   };
 
   changeLightBoxStatus = () => {
     this.setState({
-      isLightBoxOpen: !this.state.isLightBoxOpen
+      isLightBoxOpen: !this.state.isLightBoxOpen,
     });
   };
 
@@ -29,7 +31,7 @@ class ProjectModal extends React.Component {
       title,
       description,
       url,
-      technologies
+      technologies,
     } = this.props.project;
     return (
       <div>
@@ -57,7 +59,8 @@ class ProjectModal extends React.Component {
           </ModalBody>
           <ModalFooter>
             <a href={url} target="blank">
-              <Button color="primary">Visit Website</Button>{" "}
+              <Button color="primary">Visit Website</Button>
+              {' '}
             </a>
             <Button color="secondary" onClick={this.toggle}>
               Cancel

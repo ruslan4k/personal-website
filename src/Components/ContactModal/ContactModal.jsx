@@ -1,17 +1,19 @@
-import React from "react";
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
-import ContactForm from "./ContactForm/ContactForm";
-import HireForm from "./HireForm/HireForm";
-import "./ContactModal.css";
+import React from 'react';
+import {
+  Button, Modal, ModalHeader, ModalBody, ModalFooter,
+} from 'reactstrap';
+import ContactForm from './ContactForm/ContactForm';
+import HireForm from './HireForm/HireForm';
+import './ContactModal.css';
 
 class ProjectModal extends React.Component {
   state = {
-    modal: false
+    modal: false,
   };
 
   toggle = () => {
     this.setState({
-      modal: !this.state.modal
+      modal: !this.state.modal,
     });
   };
 
@@ -31,8 +33,8 @@ class ProjectModal extends React.Component {
         >
           <ModalHeader toggle={this.toggle}>Contact Form</ModalHeader>
           <ModalBody>
-            {modalName === "contact" && <ContactForm toggle={this.toggle} />}
-            {modalName === "hire" && <HireForm toggle={this.toggle} />}
+            {modalName === 'contact' && <ContactForm toggle={this.toggle} />}
+            {modalName === 'hire' && <HireForm toggle={this.toggle} />}
           </ModalBody>
         </Modal>
       </div>

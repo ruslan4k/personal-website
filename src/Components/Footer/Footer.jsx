@@ -1,9 +1,9 @@
-import React from "react";
-import LinkedInIcon from "mdi-react/LinkedinBoxIcon";
-import Github from "mdi-react/GithubCircleIcon";
-import GmailIcon from "mdi-react/GmailIcon";
+import React from 'react';
+import LinkedInIcon from 'mdi-react/LinkedinIcon';
+import Github from 'mdi-react/GithubIcon';
+import GmailIcon from 'mdi-react/GmailIcon';
 import ContactModal from '../ContactModal/ContactModal';
-import "./Footer.css";
+import './Footer.css';
 
 export default function Footer() {
   return (
@@ -47,16 +47,16 @@ export default function Footer() {
           </div>
 
           <div className="col-12 col-sm-5 text-sm-left text-center">
-          <ContactModal buttonLabel="Hire me" modalName='hire'/>
+            <ContactModal buttonLabel="Hire me" modalName="hire" />
             <p className="d-none d-sm-block">Enquire about hiring me</p>
 
-              <ContactModal buttonLabel="Contact me" modalName='contact'/>
+            <ContactModal buttonLabel="Contact me" modalName="contact" />
             <p className="d-none d-sm-block mb-0">Send a general message</p>
           </div>
         </div>
 
         <div className="text-center mt-3">
-          <h6>Copyright © 2018 Ruslan Khametov.</h6>
+          <h6>Copyright © 2020 Ruslan Khametov.</h6>
         </div>
       </div>
     </div>

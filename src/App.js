@@ -1,10 +1,10 @@
-import React, { Component } from "react";
-import Banner from "./Components/Banner/Banner";
-import Skills from "./Components/Skills/Skills";
-import Header from "./Components/Header/Header";
+import React, { Component } from 'react';
+import Banner from './Components/Banner/Banner';
+import Skills from './Components/Skills/Skills';
+import Header from './Components/Header/Header';
 import Portfolio from './Components/Portfolio/Portfolio';
 import Footer from './Components/Footer/Footer';
-import "./App.css";
+import './App.css';
 
 class App extends Component {
   render() {

@@ -1,6 +1,6 @@
-import React from "react";
-import ContactIcons from "../ContactIcons/ContactIcons";
-import "./Banner.css";
+import React from 'react';
+import ContactIcons from '../ContactIcons/ContactIcons';
+import './Banner.css';
 
 export default function Banner() {
   return (
