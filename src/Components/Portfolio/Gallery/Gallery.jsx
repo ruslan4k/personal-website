@@ -16,12 +16,14 @@ export default class Gallery extends React.Component {
     const { images } = this.props;
     return images.map((image, i) => (
       <div
+        role="button"
+        tabIndex={-1}
         className="col-4 col-md-4 col-lg-3"
         key={i}
         onClick={() =>
           this.setState({ photoIndex: i, isOpen: true }, changeLightBoxStatus())}
       >
-        <img src={image.src} className="gallery-item" />
+        <img src={image.src} className="gallery-item" alt="gallery-item" />
       </div>
     ));
   }

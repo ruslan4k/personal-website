@@ -9,5 +9,5 @@ export default function Image({ src, className }) {
 
 Image.propTypes = {
   src: PropTypes.string.isRequired,
-  className: PropTypes.string,
+  className: PropTypes.string.isRequired,
 };

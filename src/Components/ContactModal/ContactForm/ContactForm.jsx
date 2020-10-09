@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {
   FormGroup,
   Label,
@@ -46,7 +46,7 @@ const ContactForm = ({ toggle }) => (
             onChange={handleChange}
             name="email"
             onBlur={handleBlur}
-            invalid={touched.email && errors.hasOwnProperty('email')}
+            invalid={touched.email && errors.email}
           />
           <FormFeedback>{errors.email}</FormFeedback>
         </FormGroup>
@@ -59,7 +59,7 @@ const ContactForm = ({ toggle }) => (
             value={values.name}
             placeholder="Enter your Name"
             onBlur={handleBlur}
-            invalid={touched.name && errors.hasOwnProperty('name')}
+            invalid={touched.name && errors.name}
           />
           <FormFeedback>{errors.name}</FormFeedback>
         </FormGroup>
