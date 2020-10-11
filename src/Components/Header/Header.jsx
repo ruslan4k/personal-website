@@ -35,8 +35,8 @@ const Header = () => {
     { key: '#home', label: 'Home' },
     { key: '#about', label: 'About' },
     { key: '#skills', label: 'Skills' },
-    { key: '#contact', label: 'Contact' },
     { key: '#projects', label: 'Projects' },
+    { key: '#contact', label: 'Contact' },
   ];
   return (
     <header className={cn('header-area header-style-two header--fixed', { sticky: isSticky })}>

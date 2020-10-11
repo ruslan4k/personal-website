@@ -12,8 +12,7 @@ export default function Banner() {
     <div className="banner-container">
       <div className="video-background">
         <video
-          onCanPlay={() => setPlayBack()}
-          y
+          onCanPlay={setPlayBack}
           ref={videoRef}
           autoPlay
           muted

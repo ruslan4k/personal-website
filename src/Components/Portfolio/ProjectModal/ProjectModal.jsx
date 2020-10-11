@@ -1,75 +1,65 @@
-import React from 'react';
+/* eslint-disable react/forbid-prop-types */
+import React, { useState } from 'react';
 import {
   Button, Modal, ModalHeader, ModalBody, ModalFooter,
 } from 'reactstrap';
 import './ProjectModal.css';
+import { object } from 'prop-types';
 import Gallery from '../Gallery/Gallery';
 
-class ProjectModal extends React.Component {
-  state = {
-    modal: false,
-    isLightBoxOpen: false,
+const ProjectModal = ({
+  project,
+}) => {
+  const {
+    images, title, description, url,
+  } = project;
+  const [modal, setOpenModal] = useState(false);
+  const [isLightBoxOpen, setLightBoxOpen] = useState(false);
+  const toggle = () => {
+    if (isLightBoxOpen) return;
+    setOpenModal((state) => !state);
   };
 
-  toggle = () => {
-    // checks if child's lightbox open
-    if (this.state.isLightBoxOpen) return;
-    this.setState({
-      modal: !this.state.modal,
-    });
+  const changeLightBoxStatus = () => {
+    setLightBoxOpen((state) => !state);
   };
 
-  changeLightBoxStatus = () => {
-    this.setState({
-      isLightBoxOpen: !this.state.isLightBoxOpen,
-    });
-  };
-
-  render() {
-    const {
-      images,
-      title,
-      description,
-      url,
-      technologies,
-    } = this.props.project;
-    return (
-      <div>
-        <button
-          type="button"
-          className="btn btn-outline-light"
-          onClick={this.toggle}
-        >
-          {this.props.buttonLabel}
-        </button>
-        <Modal
-          size="lg"
-          centered
-          isOpen={this.state.modal}
-          toggle={this.toggle}
-          className={this.props.className}
-        >
-          <ModalHeader toggle={this.toggle}>{title}</ModalHeader>
-          <ModalBody>{description}</ModalBody>
-          <ModalBody>
-            <Gallery
-              images={images}
-              changeLightBoxStatus={this.changeLightBoxStatus}
-            />
-          </ModalBody>
-          <ModalFooter>
-            <a href={url} target="blank">
-              <Button color="primary">Visit Website</Button>
-              {' '}
-            </a>
-            <Button color="secondary" onClick={this.toggle}>
-              Cancel
-            </Button>
-          </ModalFooter>
-        </Modal>
+  return (
+    <div>
+      <div className="portfolio-button" onClick={toggle} onKeyDown={toggle} role="button" tabIndex={-1}>
+        <a className="rn-btn">
+          Show Details
+        </a>
       </div>
-    );
-  }
-}
+      <Modal
+        size="lg"
+        centered
+        isOpen={modal}
+        toggle={toggle}
+      >
+        <ModalHeader toggle={toggle}>{title}</ModalHeader>
+        <ModalBody>{description}</ModalBody>
+        <ModalBody>
+          <Gallery
+            images={images}
+            changeLightBoxStatus={changeLightBoxStatus}
+          />
+        </ModalBody>
+        <ModalFooter>
+          <a href={url} target="blank">
+            <Button color="primary">Visit Website</Button>
+          </a>
+          <Button color="secondary" onClick={toggle}>
+            Cancel
+          </Button>
+        </ModalFooter>
+      </Modal>
+    </div>
+  );
+};
+
+ProjectModal.propTypes = {
+  project: object.isRequired,
+};
 
 export default ProjectModal;
