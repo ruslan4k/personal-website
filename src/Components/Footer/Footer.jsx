@@ -1,64 +1,48 @@
 import React from 'react';
-import LinkedInIcon from 'mdi-react/LinkedinIcon';
-import Github from 'mdi-react/GithubIcon';
-import GmailIcon from 'mdi-react/GmailIcon';
-import ContactModal from '../ContactModal/ContactModal';
-import './Footer.css';
+import {
+  FaTwitter, FaInstagram, FaFacebookF, FaLinkedinIn,
+} from 'react-icons/fa';
+import './Footer.scss';
 
-export default function Footer() {
-  return (
-    <div className="footer-container pt-3">
-      <div className="container">
-        <div className="row justify-content-center align-items-center">
-          <div className="col-12 offset-sm-2 col-sm-5 mb-2">
-            <div className="row justify-content-center">
-              <div className="col-3 col-sm-12 row justify-content-center justify-content-sm-start">
-                <a
-                  target="blank"
-                  href="https://www.linkedin.com/in/ruslan-khametov/"
-                >
-                  <GmailIcon size={36} className="social-icon gmail" />
-                </a>
-                <p className="d-none d-sm-block text-self-centered">
-                  Contact me via email
-                </p>
-              </div>
+const SocialShare = [
+  { Social: <FaFacebookF />, link: 'https://www.facebook.com/' },
+  { Social: <FaLinkedinIn />, link: 'https://www.linkedin.com/' },
+  { Social: <FaInstagram />, link: 'https://www.instagram.com/' },
+  { Social: <FaTwitter />, link: 'https://twitter.com/' },
+];
 
-              <div className="col-3 col-sm-12 row justify-content-center justify-content-sm-start">
-                <a
-                  target="blank"
-                  href="https://www.linkedin.com/in/ruslan-khametov/"
-                >
-                  <LinkedInIcon size={36} className="social-icon linkedIn" />
-                </a>
-                <p className="d-none d-sm-block text-self-centered">
-                  View my LinkedIn profile
-                </p>
-              </div>
-              <div className="col-3 col-sm-12 row justify-content-center justify-content-sm-start">
-                <a target="blank" href="https://github.com/ruslan4k/">
-                  <Github size={36} className="social-icon github" />
-                </a>
-                <p className="d-none d-sm-block text-self-centered">
-                  View my GitHub profile
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-12 col-sm-5 text-sm-left text-center">
-            <ContactModal buttonLabel="Hire me" modalName="hire" />
-            <p className="d-none d-sm-block">Enquire about hiring me</p>
-
-            <ContactModal buttonLabel="Contact me" modalName="contact" />
-            <p className="d-none d-sm-block mb-0">Send a general message</p>
+const FooterTwo = () => (
+  <div className="footer-style ptb--30 bg_image bg_image--1" data-black-overlay="6">
+    <div className="wrapper plr--50 plr_sm--20">
+      <div className="row align-items-center justify-content-between">
+        <div className="col-lg-4 col-md-6 col-sm-6 col-12">
+          <div className="inner">
+            <div className="logo text-center text-sm-left mb_sm--20" />
           </div>
         </div>
-
-        <div className="text-center mt-3">
-          <h6>Copyright © 2020 Ruslan Khametov.</h6>
+        <div className="col-lg-4 col-md-6 col-sm-6 col-12 d-flex justify-content-center">
+          <div className="inner text-center">
+            <ul className="social-share rn-lg-size d-flex justify-content-center liststyle">
+              {SocialShare.map((val) => (
+                <li key={val.link}><a href={`${val.link}`}>{val.Social}</a></li>
+              ))}
+            </ul>
+          </div>
+        </div>
+        <div className="col-lg-4 col-md-12 col-sm-12 col-12 d-flex justify-content-center">
+          <div className="inner text-lg-right text-center mt_md--20 mt_sm--20">
+            <div className="text">
+              <p>
+                Copyright © 2020
+                <br />
+                {' '}
+                Ruslan Khametov
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  );
-}
+  </div>
+);
+export default FooterTwo;

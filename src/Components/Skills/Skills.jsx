@@ -51,7 +51,7 @@ const Skills = () => (
       </div>
       <div className="row service-one-wrapper">
         {ServiceList.map((val) => (
-          <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12" key={val}>
+          <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12" key={val.title}>
             <div>
               <div className="service service_style">
                 <div className="icon">{val.icon}</div>

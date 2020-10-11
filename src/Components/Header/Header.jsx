@@ -71,7 +71,7 @@ const Header = () => {
               })}
             >
               {SocialShare.map((val) => (
-                <li key={val}>
+                <li key={val.link}>
                   <a href={`${val.link}`}>{val.Social}</a>
                 </li>
               ))}
