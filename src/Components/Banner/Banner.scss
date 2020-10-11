@@ -49,42 +49,40 @@
   animation: blur 2s;
 }
 
-.banner h2 {
-  animation: fadein 1.5s;
-  display: inline-block;
-  opacity: 1;
-  padding: 0.35em 1em;
-  position: relative;
-  z-index: 1;
-  font-weight: 800;
-  letter-spacing: 0.225em;
-  margin: 0 0 0.2em 0;
-  text-transform: uppercase;
-  color: #fff;
+.banner {
+  h2 {
+    animation: fadein 1.5s;
+    display: inline-block;
+    opacity: 1;
+    padding: 0.35em 1em;
+    position: relative;
+    z-index: 1;
+    font-weight: 800;
+    letter-spacing: 0.225em;
+    margin: 0 0 0.2em 0;
+    text-transform: uppercase;
+    color: #fff;
+  }
+  h2:before,
+  h2:after {
+    animation: expansion 0.8s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.8s;
+    background: #fff;
+    content: '';
+    display: block;
+    height: 5px;
+    position: absolute;
+  }
+  h2:before {
+    top: 0;
+    left: 0;
+  }
+  h2:after {
+    bottom: 0;
+    right: 0;
+  }
 }
-
-.banner h2:before,
-h2:after {
-  animation: expansion 0.8s;
-  animation-fill-mode: forwards;
-  animation-delay: 0.8s;
-  background: #fff;
-  content: '';
-  display: block;
-  height: 5px;
-  position: absolute;
-}
-
-.banner h2:before {
-  top: 0;
-  left: 0;
-}
-
-.banner h2:after {
-  bottom: 0;
-  right: 0;
-}
-
 .text-loop span {
   animation: fadein 1s;
   animation-delay: 1.6s;
