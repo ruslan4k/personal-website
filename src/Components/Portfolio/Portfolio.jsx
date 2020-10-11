@@ -63,7 +63,7 @@ const projects = [
 const Portfolio = () =>
   (
     <div className="portfolio-container container">
-      <h1>Side Projects</h1>
+      <h2>Side Projects</h2>
       <div className="row justify-content-start justify-content-md-center">
         {projects.map((projectItem) => (
           <div className="item-wrap col-12 col-sm-6 col-lg-4">

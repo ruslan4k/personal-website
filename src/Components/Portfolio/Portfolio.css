@@ -4,6 +4,7 @@
 
 .portfolio-container {
   text-align: center;
+  padding: 120px 0;
 }
 
 .portfolio-container .item-wrap .overlay::before {
