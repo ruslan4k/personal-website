@@ -3,7 +3,7 @@ import Banner from './Components/Banner/Banner';
 import Skills from './Components/Skills/Skills';
 import AboutMe from './Components/AboutMe/AboutMe';
 import Header from './Components/Header/Header';
-import Portfolio from './Components/Portfolio/Portfolio';
+import PortfolioOld from './Components/Portfolio/Portfolio';
 import ContactMe from './Components/ContactMe/ContactMe';
 import Footer from './Components/Footer/Footer';
 import './App.css';
@@ -14,7 +14,7 @@ const App = () => (
     <Banner />
     <AboutMe />
     <Skills />
-    <Portfolio />
+    {/* <PortfolioOld /> */}
     <ContactMe />
     <Footer />
   </div>

@@ -84,12 +84,19 @@
   }
 }
 .text-loop span {
+  font-family: Yellowtail, sans-serif;
+
   animation: fadein 1s;
   animation-delay: 1.6s;
   animation-fill-mode: forwards;
   opacity: 0;
   font-weight: 900;
   font-size: 55px;
+}
+
+.testsa {
+  height: 100px;
+  -webkit-transform: rotate(-5deg);
 }
 
 .inner {
