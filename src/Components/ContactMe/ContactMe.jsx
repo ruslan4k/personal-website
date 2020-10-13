@@ -10,7 +10,7 @@ const ContactMe = () => {
   });
 
   return (
-    <div className="contact-form-styles bg_color--5">
+    <div id="contact" className="contact-form-styles bg_color--5">
       <div className="container">
         <div className="row row--35 align-items-center">
           <div className="col-lg-6 order-2 order-lg-1">

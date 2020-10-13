@@ -76,9 +76,9 @@ const projects = [
   },
 ];
 
-const InteriorLanding = () => (
+const Portfolio = () => (
 
-  <div className="portfolio-area ptb--120 bg_color--1" id="portfolio">
+  <div id="projects" className="portfolio-area ptb--120 bg_color--1">
     <div className="container">
       <div className="row">
         <div className="col-lg-6">
@@ -116,4 +116,4 @@ const InteriorLanding = () => (
 
 );
 
-export default InteriorLanding;
+export default Portfolio;

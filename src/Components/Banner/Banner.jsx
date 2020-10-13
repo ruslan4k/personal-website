@@ -9,7 +9,7 @@ export default function Banner() {
     videoRef.current.playbackRate = 0.7;
   };
   return (
-    <div className="banner-container">
+    <div id="home" className="banner-container">
       <div className="video-background">
         <video
           onCanPlay={setPlayBack}

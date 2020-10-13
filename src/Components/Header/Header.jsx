@@ -32,11 +32,11 @@ const Header = () => {
   }, []);
 
   const links = [
-    { key: '#home', label: 'Home' },
-    { key: '#about', label: 'About' },
-    { key: '#skills', label: 'Skills' },
-    { key: '#projects', label: 'Projects' },
-    { key: '#contact', label: 'Contact' },
+    { key: 'home', label: 'Home' },
+    { key: 'about', label: 'About' },
+    { key: 'skills', label: 'Skills' },
+    { key: 'projects', label: 'Projects' },
+    { key: 'contact', label: 'Contact' },
   ];
   return (
     <header className={cn('header-area header-style-two header--fixed', { sticky: isSticky })}>
@@ -51,13 +51,13 @@ const Header = () => {
               className={cn('mainmenu', {
                 'color-black': isSticky,
               })}
-              items={['home', 'about', 'service', 'portfolio', 'blog', 'contact']}
+              items={links.map((link) => link.key)}
               currentClassName="is-current"
               offset={-200}
             >
               {links.map((item) => (
                 <li key={item.key}>
-                  <a href="#home">{item.label}</a>
+                  <a href={`#${item.key}`}>{item.label}</a>
                 </li>
               ))}
             </Scrollspy>
@@ -83,12 +83,12 @@ const Header = () => {
             </a>
           </div>
           <div className="humburger-menu d-block d-lg-none pl--20">
-            <span onClick={menuTrigger} className="menutrigger text-white">
+            <span role="button" tabIndex={-1} onKeyDown={menuTrigger} onClick={menuTrigger} className="menutrigger text-white">
               <FiMenu />
             </span>
           </div>
           <div className="close-menu d-block d-lg-none">
-            <span onClick={cLoseMenuTrigger} className="closeTrigger">
+            <span role="button" tabIndex={-1} onKeyDown={cLoseMenuTrigger} onClick={cLoseMenuTrigger} className="closeTrigger">
               <FiX />
             </span>
           </div>

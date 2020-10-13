@@ -9,7 +9,7 @@ const AboutMe = () => {
   const tab1 = 'Experience';
   const tab2 = 'Education & Certification';
   return (
-    <div>
+    <div id="about">
       <div className="tabs-area">
         <div className="section-title text-center">
           <h2>About Me</h2>
