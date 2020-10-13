@@ -1,14 +1,14 @@
 import React from 'react';
 import {
-  FaTwitter, FaInstagram, FaFacebookF, FaLinkedinIn,
+  FaGithub, FaCodepen, FaLinkedinIn,
 } from 'react-icons/fa';
 import './Footer.scss';
+import { GITHUB_LINK, LINKEDIN_LINK, CODEPEN_LINK } from '../../constants/socialLinks';
 
-const SocialShare = [
-  { Social: <FaFacebookF />, link: 'https://www.facebook.com/' },
-  { Social: <FaLinkedinIn />, link: 'https://www.linkedin.com/' },
-  { Social: <FaInstagram />, link: 'https://www.instagram.com/' },
-  { Social: <FaTwitter />, link: 'https://twitter.com/' },
+const socialShareIcons = [
+  { icon: <FaLinkedinIn />, link: LINKEDIN_LINK },
+  { icon: <FaGithub />, link: GITHUB_LINK },
+  { icon: <FaCodepen />, link: CODEPEN_LINK },
 ];
 
 const FooterTwo = () => (
@@ -23,8 +23,8 @@ const FooterTwo = () => (
         <div className="col-lg-4 col-md-6 col-sm-6 col-12 d-flex justify-content-center">
           <div className="inner text-center">
             <ul className="social-share rn-lg-size d-flex justify-content-center liststyle">
-              {SocialShare.map((val) => (
-                <li key={val.link}><a href={`${val.link}`}>{val.Social}</a></li>
+              {socialShareIcons.map((val) => (
+                <li key={val.link}><a rel="noreferrer" target="_blank" href={`${val.link}`}>{val.icon}</a></li>
               ))}
             </ul>
           </div>

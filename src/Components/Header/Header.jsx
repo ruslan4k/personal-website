@@ -1,17 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import {
-  FaTwitter, FaInstagram, FaFacebookF, FaLinkedinIn,
-} from 'react-icons/fa';
+import { FaLinkedinIn, FaGithub, FaCodepen } from 'react-icons/fa';
 import { FiX, FiMenu } from 'react-icons/fi';
 import Scrollspy from 'react-scrollspy';
 import cn from 'classnames';
 import './Header.scss';
+import { GITHUB_LINK, LINKEDIN_LINK, CODEPEN_LINK } from '../../constants/socialLinks';
 
-const SocialShare = [
-  { Social: <FaFacebookF />, link: 'https://www.facebook.com/' },
-  { Social: <FaLinkedinIn />, link: 'https://www.linkedin.com/' },
-  { Social: <FaInstagram />, link: 'https://www.instagram.com/' },
-  { Social: <FaTwitter />, link: 'https://twitter.com/' },
+const socialShareIcons = [
+  { icon: <FaLinkedinIn />, link: LINKEDIN_LINK },
+  { icon: <FaGithub />, link: GITHUB_LINK },
+  { icon: <FaCodepen />, link: CODEPEN_LINK },
 ];
 const Header = () => {
   const [isSticky, setSticky] = useState(false);
@@ -70,9 +68,11 @@ const Header = () => {
                 'color-black': isSticky,
               })}
             >
-              {SocialShare.map((val) => (
+              {socialShareIcons.map((val) => (
                 <li key={val.link}>
-                  <a href={`${val.link}`}>{val.Social}</a>
+                  <a href={`${val.link}`} rel="noreferrer" target="_blank">
+                    {val.icon}
+                  </a>
                 </li>
               ))}
             </ul>
