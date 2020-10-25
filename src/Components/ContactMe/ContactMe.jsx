@@ -3,6 +3,7 @@ import { Formik } from 'formik';
 import * as yup from 'yup';
 import './ContactMe.scss';
 import { FormGroup, Input, FormFeedback, Form } from 'reactstrap';
+import swal from '@sweetalert/with-react';
 
 const ContactMe = () => (
   <div id="contact" className="contact-form-styles bg_color--5">
@@ -26,7 +27,7 @@ const ContactMe = () => (
                 subject: yup.string().required('Subject is required!'),
                 message: yup.string().required('Message is required!'),
               })}
-              onSubmit={async (values) => {
+              onSubmit={async (values, { resetForm }) => {
                 try {
                   await fetch('https://us-central1-fake-data-generator-292318.cloudfunctions.net/contact_form_request', {
                     method: 'POST',
@@ -35,8 +36,14 @@ const ContactMe = () => (
                       'Content-Type': 'application/json',
                     },
                   });
+                  resetForm();
+                  swal({ title: 'Success!', text: 'You message has been sent!', icon: 'success' });
                 } catch (error) {
-                  console.log('error', error);
+                  swal({
+                    title: 'Failure',
+                    text: 'Some Error Occurred. Please, contact me using my social links',
+                    icon: 'error',
+                  });
                 }
               }}
               render={({ errors, touched, handleChange, values, handleSubmit, handleBlur }) => (
