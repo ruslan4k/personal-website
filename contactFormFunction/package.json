@@ -1,0 +1,7 @@
+{
+  "name": "contact-form-request",
+  "version": "0.0.1",
+  "dependencies": {
+    "nodemailer": "6.2.1"
+  }
+}
