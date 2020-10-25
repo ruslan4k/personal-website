@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-  Tab, Tabs, TabList, TabPanel,
-} from 'react-tabs';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import './AboutMe.scss';
 
 const AboutMe = () => {
@@ -38,7 +36,7 @@ const AboutMe = () => {
                           Full Stack Engineer
                           <span> - Wizer</span>
                         </a>
-                        {' '}
+{' '}
                         FEB 2019 - PRESENT TIME
                       </li>
                       <li>
@@ -46,7 +44,7 @@ const AboutMe = () => {
                           Full Stack Engineer
                           <span> - Easier Chef (SpaceStep agency)</span>
                         </a>
-                        {' '}
+{' '}
                         MAY 2019 - JUNE 2019
                       </li>
                       <li>
@@ -54,7 +52,7 @@ const AboutMe = () => {
                           Full Stack Engineer
                           <span> - Tabnex (SpaceStep agency)</span>
                         </a>
-                        {' '}
+{' '}
                         AUG 2018 - FEB 2019
                       </li>
                     </ul>
@@ -69,7 +67,7 @@ const AboutMe = () => {
                           BSc In Mechanical Engineering
                           <span> - Ufa State Petroleum Technological University</span>
                         </a>
-                        {' '}
+{' '}
                         2011 - 2015
                       </li>
                     </ul>

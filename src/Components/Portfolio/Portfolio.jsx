@@ -34,8 +34,8 @@ const projects = [
     shortDescription: 'Fake Data Generator',
     thumbnail: activityTimerImg,
     description:
-      'Application to help you control time user spends working / resting.'
-      + ' Counts how much hours user works / rests each day. Counts how many productive hours user has each week.',
+      'Application to help you control time user spends working / resting.' +
+      ' Counts how much hours user works / rests each day. Counts how many productive hours user has each week.',
     technologies: 'Node.js, Express.js, MongoDB, React, Redux-Saga, Material UI',
     url: 'https://activity-timer.herokuapp.com/',
   },
@@ -47,8 +47,8 @@ const projects = [
     shortDescription: 'Time Tracker app',
     thumbnail: activityTimerImg,
     description:
-      'Application to help you control time user spends working / resting.'
-      + ' Counts how much hours user works / rests each day. Counts how many productive hours user has each week.',
+      'Application to help you control time user spends working / resting.' +
+      ' Counts how much hours user works / rests each day. Counts how many productive hours user has each week.',
     technologies: 'Angular, Node.js, Express.js, MongoDB, Material Design',
     url: 'https://activity-timer.herokuapp.com/',
   },
@@ -77,7 +77,6 @@ const projects = [
 ];
 
 const Portfolio = () => (
-
   <div id="projects" className="portfolio-area ptb--120 bg_color--1">
     <div className="container">
       <div className="row">
@@ -113,7 +112,6 @@ const Portfolio = () => (
       </div>
     </div>
   </div>
-
 );
 
 export default Portfolio;

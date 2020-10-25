@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-  FiLayers, FiDownloadCloud, FiCode, FiDatabase, FiLayout, FiTrendingUp,
-} from 'react-icons/fi';
+import { FiLayers, FiDownloadCloud, FiCode, FiDatabase, FiLayout, FiTrendingUp } from 'react-icons/fi';
 import './Skills.scss';
 
 const ServiceList = [
@@ -43,9 +41,7 @@ const Skills = () => (
         <div className="col-lg-12">
           <div className="section-title text-center mb--30">
             <h2>My Skills</h2>
-            <p>
-              There are many technologies that I have experience with.
-            </p>
+            <p>There are many technologies that I have experience with.</p>
           </div>
         </div>
       </div>

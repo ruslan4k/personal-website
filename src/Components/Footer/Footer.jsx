@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-  FaGithub, FaCodepen, FaLinkedinIn,
-} from 'react-icons/fa';
+import { FaGithub, FaCodepen, FaLinkedinIn } from 'react-icons/fa';
 import './Footer.scss';
 import { GITHUB_LINK, LINKEDIN_LINK, CODEPEN_LINK } from '../../constants/socialLinks';
 
@@ -24,7 +22,11 @@ const FooterTwo = () => (
           <div className="inner text-center">
             <ul className="social-share rn-lg-size d-flex justify-content-center liststyle">
               {socialShareIcons.map((val) => (
-                <li key={val.link}><a rel="noreferrer" target="_blank" href={`${val.link}`}>{val.icon}</a></li>
+                <li key={val.link}>
+                  <a rel="noreferrer" target="_blank" href={`${val.link}`}>
+                    {val.icon}
+                  </a>
+                </li>
               ))}
             </ul>
           </div>
@@ -35,7 +37,6 @@ const FooterTwo = () => (
               <p>
                 Copyright © 2020
                 <br />
-                {' '}
                 Ruslan Khametov
               </p>
             </div>

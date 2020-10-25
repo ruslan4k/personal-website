@@ -1,14 +1,14 @@
 // All Css Here
-@import '~bootstrap/dist/css/bootstrap.min.css';
-@import "./plugins.css";
+// @import '~bootstrap/dist/css/bootstrap.min.css';
+@import './plugins.css';
 @import './scss/style.scss';
-@import "~slick-carousel/slick/slick.css";
-@import "~slick-carousel/slick/slick-theme.css";
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';
 
 html,
 body {
-    background-color: #FFFFFF;
-    color: #383838;
+  background-color: #ffffff;
+  color: #383838;
 }
 
 h1,
@@ -17,92 +17,92 @@ h3,
 h4,
 h5,
 h6 {
-    color: #383838;
+  color: #383838;
 }
 
 section table {
-    background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 ::-moz-selection {
-    background: #444444;
-    color: #DDDDDD;
+  background: #444444;
+  color: #dddddd;
 }
 
 ::selection {
-    background: #444444;
-    color: #DDDDDD;
+  background: #444444;
+  color: #dddddd;
 }
 
 a,
 a:hover,
 a:active {
-    color: #0000FF;
+  color: #0000ff;
 }
 
 hr {
-    border-top: 1px solid #EBEBEB;
-    border-bottom: 1px solid #FFFFFF;
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ffffff;
 }
 
 div.navbar-inner,
 .navbar .nav li ul {
-    background: #DDDDDD;
-    color: #222222;
+  background: #dddddd;
+  color: #222222;
 }
 
 a.btn-navbar {
-    background: #DDDDDD;
-    color: #222222;
+  background: #dddddd;
+  color: #222222;
 }
 
 .navbar .nav li a {
-    color: #222222;
-    text-shadow: 1px 1px 0px #EEEEEE;
+  color: #222222;
+  text-shadow: 1px 1px 0px #eeeeee;
 }
 
 .navbar .nav li a:hover,
 .navbar .nav li.active a {
-    text-shadow: none;
+  text-shadow: none;
 }
 
-.navbar .nav>li a {
-    color: #444444;
+.navbar .nav > li a {
+  color: #444444;
 }
 
-.navbar .nav>li a:hover,
+.navbar .nav > li a:hover,
 a.btn-navbar:hover {
-    background: #444444;
-    color: #DDDDDD;
+  background: #444444;
+  color: #dddddd;
 }
 
-.navbar .nav .active>a,
-.navbar .nav .active>a:hover,
+.navbar .nav .active > a,
+.navbar .nav .active > a:hover,
 a.btn-navbar:active {
-    background-color: #444444;
-    color: #DDDDDD;
+  background-color: #444444;
+  color: #dddddd;
 }
 
 .navbar .nav li ul li a:hover {
-    background: #444444;
-    color: #DDDDDD;
+  background: #444444;
+  color: #dddddd;
 }
 
 .navbar .nav li ul li a:active {
-    background: #444444;
-    color: #DDDDDD;
+  background: #444444;
+  color: #dddddd;
 }
 
 .btn-primary {
-    background-image: -moz-linear-gradient(top, #0088CC, #0044CC);
-    background-image: -ms-linear-gradient(top, #0088CC, #0044CC);
-    background-image: -webkit-gradient(linear, 0 0, 0 #0088CC, from(#DDDDDD), to(#0044CC));
-    background-image: -webkit-linear-gradient(top, #0088CC, #0044CC);
-    background-image: -o-linear-gradient(top, #0088CC, #0044CC);
-    background-image: linear-gradient(top, #0088CC, #0044CC);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088CC', endColorstr='#0044CC', GradientType=0);
-    border-color: #0044CC #0044CC #bfbfbf;
-    color: #FFFFFF;
+  background-image: -moz-linear-gradient(top, #0088cc, #0044cc);
+  background-image: -ms-linear-gradient(top, #0088cc, #0044cc);
+  background-image: -webkit-gradient(linear, 0 0, 0 #0088cc, from(#dddddd), to(#0044cc));
+  background-image: -webkit-linear-gradient(top, #0088cc, #0044cc);
+  background-image: -o-linear-gradient(top, #0088cc, #0044cc);
+  background-image: linear-gradient(top, #0088cc, #0044cc);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088CC', endColorstr='#0044CC', GradientType=0);
+  border-color: #0044cc #0044cc #bfbfbf;
+  color: #ffffff;
 }
 
 .btn-primary:hover,
@@ -110,12 +110,12 @@ a.btn-navbar:active {
 .btn-primary.active,
 .btn-primary.disabled,
 .btn-primary[disabled] {
-    background-color: #0044CC;
+  background-color: #0044cc;
 }
 
 #theme_options2 img {
-    border: 1px solid #eee;
-    margin: 10px 0;
-    max-width: 100%;
-    padding: 10px;
+  border: 1px solid #eee;
+  margin: 10px 0;
+  max-width: 100%;
+  padding: 10px;
 }

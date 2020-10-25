@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-curly-newline */
+import { array, func } from 'prop-types';
 import React from 'react';
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
@@ -11,17 +13,21 @@ export default class Gallery extends React.Component {
     };
   }
 
-  renderGallery() {
+  handleClickImage = (i) => {
     const { changeLightBoxStatus } = this.props;
+    this.setState({ photoIndex: i, isOpen: true }, changeLightBoxStatus());
+  };
+
+  renderGallery() {
     const { images } = this.props;
     return images.map((image, i) => (
       <div
         role="button"
         tabIndex={-1}
         className="col-4 col-md-4 col-lg-3"
-        key={i}
-        onClick={() =>
-          this.setState({ photoIndex: i, isOpen: true }, changeLightBoxStatus())}
+        key={image.src}
+        onKeyDown={() => this.handleClickImage(i)}
+        onClick={() => this.handleClickImage(i)}
       >
         <img src={image.src} className="gallery-item" alt="gallery-item" />
       </div>
@@ -38,22 +44,27 @@ export default class Gallery extends React.Component {
           <Lightbox
             mainSrc={images[photoIndex].src}
             nextSrc={images[(photoIndex + 1) % images.length].src}
-            prevSrc={
-              images[(photoIndex + images.length - 1) % images.length].src
-            }
-            onCloseRequest={() =>
-              this.setState({ isOpen: false }, changeLightBoxStatus())}
+            prevSrc={images[(photoIndex + images.length - 1) % images.length].src}
+            onCloseRequest={() => this.setState({ isOpen: false }, changeLightBoxStatus())}
             onMovePrevRequest={() =>
               this.setState({
                 photoIndex: (photoIndex + images.length - 1) % images.length,
-              })}
+              })
+            }
             onMoveNextRequest={() =>
               this.setState({
                 photoIndex: (photoIndex + 1) % images.length,
-              })}
+              })
+            }
           />
         )}
       </div>
     );
   }
 }
+
+Gallery.propTypes = {
+  // eslint-disable-next-line react/forbid-prop-types
+  images: array.isRequired,
+  changeLightBoxStatus: func.isRequired,
+};
