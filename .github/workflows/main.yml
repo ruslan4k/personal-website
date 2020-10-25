@@ -1,0 +1,19 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Deploy to Google Cloud
+        uses: actions-hub/gcloud@master
+        env:
+          PROJECT_ID: ${{secrets.GCP_PROJECT_ID}}
+          APPLICATION_CREDENTIALS: ${{secrets.GCP_SA_KEY}}
+        with:
+          args: functions deploy contact_form_request --entry-point contactFormRequest --runtime=nodejs12 --trigger-http  --source=./contactFormFunction
