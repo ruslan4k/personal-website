@@ -1,1 +1,4 @@
-Currently in development.
+# .env
+
+REACT_APP_ENV=<REACT_APP_ENV>
+REACT_APP_SENTRY_DSN=<REACT_APP_SENTRY_DSN>
