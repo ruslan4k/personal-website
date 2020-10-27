@@ -78,7 +78,12 @@ const Header = () => {
             </ul>
           </div>
           <div className="header-btn">
-            <a className="rn-btn" href="#">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              className="rn-btn"
+              href="https://storage.rk-projects.dev/Ruslan_Khametov%20_Full-Stack_Software_Engineer.pdf"
+            >
               <span>Open CV</span>
             </a>
           </div>
