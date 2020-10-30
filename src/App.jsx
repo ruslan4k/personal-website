@@ -14,7 +14,6 @@ const App = () => {
     ReactGA.initialize('UA-181281293-1');
     ReactGA.pageview(window.location.pathname + window.location.search);
   }, []);
-
   return (
     <div>
       <Header />
