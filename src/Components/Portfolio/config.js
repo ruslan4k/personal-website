@@ -6,13 +6,13 @@ export const portfolioSlick = {
   arrows: true,
   responsive: [
     {
-      breakpoint: 800,
+      breakpoint: 1200,
       settings: {
         slidesToShow: 3,
       },
     },
     {
-      breakpoint: 1200,
+      breakpoint: 800,
       settings: {
         slidesToShow: 3,
       },

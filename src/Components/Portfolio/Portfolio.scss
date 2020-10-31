@@ -148,29 +148,29 @@
   &.portfolio-interior-design {
     .thumbnail {
       &.image-1 {
-        background-image: url(../../assets/images/projects/activityTimer/4.png);
+        background-image: url(../../assets/images/projects/fakeDataGenerator/4.jpg);
       }
 
       &.image-2 {
-        background-image: url(../../assets/images/projects/autoApplet/6.png);
+        background-image: url(../../assets/images/projects/activityTimer/5.png);
       }
 
       &.image-3 {
-        background-image: url(../../assets/images/projects/activityTimer/5.png);
+        background-image: url(../../assets/images/projects/autoApplet/6.png);
       }
     }
     .bg-blr-image {
       background-image: url(../../assets/images/projects/activityTimer/4.png);
       &.image-1 {
-        background-image: url(../../assets/images/projects/activityTimer/4.png);
+        background-image: url(../../assets/images/projects/fakeDataGenerator/4.jpg);
       }
 
       &.image-2 {
-        background-image: url(../../assets/images/projects/autoApplet/6.png);
+        background-image: url(../../assets/images/projects/activityTimer/5.png);
       }
 
       &.image-3 {
-        background-image: url(../../assets/images/projects/activityTimer/5.png);
+        background-image: url(../../assets/images/projects/autoApplet/6.png);
       }
     }
   }
@@ -224,10 +224,8 @@
   }
 }
 
-.portfolio-sacousel-inner {
+.portfolio-carousel-inner {
   .slick-list {
-    margin-left: -200px;
-    margin-right: -200px;
     @media #{$md-layout} {
       margin-left: 15px;
       margin-right: 15px;
@@ -243,7 +241,7 @@
   }
 }
 
-.portfolio-sacousel-inner {
+.portfolio-carousel-inner {
   .slick-slide {
     padding-left: 15px;
     padding-right: 15px;
@@ -266,13 +264,13 @@
   }
 }
 
-.portfolio-sacousel-inner {
+.portfolio-carousel-inner {
   .slick-list {
     overflow: visible;
   }
 }
 
-.portfolio-sacousel-inner,
+.portfolio-carousel-inner,
 .rn-slick-dot {
   .slick-dots {
     bottom: -60px;

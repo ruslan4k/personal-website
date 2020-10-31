@@ -30,11 +30,13 @@ const ProjectModal = ({ project }) => {
           <Gallery images={images} changeLightBoxStatus={changeLightBoxStatus} />
         </ModalBody>
         <ModalFooter>
-          <a href={url} target="blank">
-            <Button color="primary">Visit Website</Button>
-          </a>
+          {url && (
+            <a href={url} target="blank">
+              <Button color="primary">Visit Website</Button>
+            </a>
+          )}
           <Button color="secondary" onClick={toggle}>
-            Cancel
+            Close
           </Button>
         </ModalFooter>
       </Modal>
