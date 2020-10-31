@@ -55,7 +55,9 @@ const Header = () => {
             >
               {links.map((item) => (
                 <li key={item.key}>
-                  <a href={`#${item.key}`}>{item.label}</a>
+                  <a onClick={cLoseMenuTrigger} href={`#${item.key}`}>
+                    {item.label}
+                  </a>
                 </li>
               ))}
             </Scrollspy>

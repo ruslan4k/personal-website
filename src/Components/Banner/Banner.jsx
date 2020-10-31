@@ -40,6 +40,7 @@ export default function Banner() {
                 <span>Node.js</span>
                 <span>SQL</span>
                 <span>NoSQL</span>
+                <span>Firebase</span>
               </TextLoop>
             </div>
 
