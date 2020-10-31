@@ -1,12 +1,12 @@
 import React from 'react';
 import Slider from 'react-slick';
 import { portfolioSlick } from './config';
-import activityTimerImg from '../../assets/images/projects/ActivityTimer/4.png';
-import autoAppletImg from '../../assets/images/projects/autoApplet/settingsMobile_pixel_quite_black_portrait.png';
+import activityTimerImg from '../../assets/images/projects/activityTimer/4.png';
+import autoAppletImg from '../../assets/images/projects/autoApplet/6.png';
 import ProjectModal from './ProjectModal/ProjectModal';
 import './Portfolio.scss';
 
-const ActivityTimerFolder = require.context('../../assets/images/projects/ActivityTimer/', false, /.*\.png$/);
+const ActivityTimerFolder = require.context('../../assets/images/projects/activityTimer/', false, /.*\.png$/);
 const AutoAppletFolder = require.context('../../assets/images/projects/autoApplet/', false, /.*\.png$/);
 const ActivityTimerImages = [];
 const AutoAppletImages = [];
