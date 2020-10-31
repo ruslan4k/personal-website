@@ -25,7 +25,7 @@ export default function Banner() {
           muted
           playsInline
           loop
-          src={`${'/assets/images/service/skyCamp.mp4'}`}
+          src={`${'/assets/videos/skyCamp.mp4'}`}
         />
       </div>
       {isVideoAvailable && (
