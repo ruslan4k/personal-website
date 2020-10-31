@@ -4,15 +4,18 @@ import { portfolioSlick } from './config';
 import activityTimerImg from '../../assets/images/projects/activityTimer/4.png';
 import fakeDataGeneratorImg from '../../assets/images/projects/fakeDataGenerator/4.jpg';
 import autoAppletImg from '../../assets/images/projects/autoApplet/6.png';
+import personalWebsiteImg from '../../assets/images/projects/website/1.jpg';
 import ProjectModal from './ProjectModal/ProjectModal';
 import './Portfolio.scss';
 
 const ActivityTimerFolder = require.context('../../assets/images/projects/activityTimer/', false, /.*\.png$/);
 const AutoAppletFolder = require.context('../../assets/images/projects/autoApplet/', false, /.*\.png$/);
+const WebsiteFolder = require.context('../../assets/images/projects/website/', false, /.*\.jpg$/);
 const FakeDataGeneratorFolder = require.context('../../assets/images/projects/fakeDataGenerator', false, /.*\.jpg$/);
 const ActivityTimerImages = [];
 const AutoAppletImages = [];
 const FakeDataGeneratorImages = [];
+const WebsiteImages = [];
 ActivityTimerFolder.keys().forEach((image) => {
   ActivityTimerImages.push({
     src: ActivityTimerFolder(image),
@@ -36,6 +39,14 @@ FakeDataGeneratorFolder.keys().forEach((image) => {
   });
 });
 
+WebsiteFolder.keys().forEach((image) => {
+  WebsiteImages.push({
+    src: WebsiteFolder(image),
+    caption: '',
+    altText: '',
+  });
+});
+
 const projects = [
   {
     image: 'image-1',
@@ -47,6 +58,16 @@ const projects = [
     description: 'Generates mock data to test your app. It helps you generate random data in various ways.',
     technologies: 'Node.js, Express.js, MongoDB, React, Redux-Saga, Material UI',
     url: 'https://fakedata.rk-projects.dev/',
+  },
+  {
+    image: 'image-4',
+    images: WebsiteImages,
+    title: 'My Website',
+    year: 2020,
+    shortDescription: 'Personal Website',
+    thumbnail: personalWebsiteImg,
+    description: '',
+    technologies: 'React.js, Bootstrap, Cloud Functions, GitHub actions',
   },
   {
     image: 'image-2',
