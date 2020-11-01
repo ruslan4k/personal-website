@@ -6,10 +6,11 @@
 .gallery-item {
   width: inherit;
   height: auto;
+  margin-bottom: 32px;
 }
 
 .ReactModal__Overlay.ReactModal__Overlay--after-open {
-  z-index: 2000!important;
+  z-index: 2000 !important;
 }
 
 .modal-title {
@@ -20,9 +21,9 @@
 
 .modal-description {
   font-weight: 300;
-  font-size: 1em!important;
+  font-size: 1em !important;
 }
 
 .modal-header {
-  text-align: center!important;
+  text-align: center !important;
 }
