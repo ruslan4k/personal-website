@@ -3,6 +3,7 @@ html {
 }
 
 .fullscreen-loader {
+  overflow: hidden;
   background-color: #000;
   position: fixed;
   z-index: 9999;
