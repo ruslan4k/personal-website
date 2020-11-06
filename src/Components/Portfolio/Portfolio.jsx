@@ -17,31 +17,43 @@ const AutoAppletImages = [];
 const FakeDataGeneratorImages = [];
 const WebsiteImages = [];
 ActivityTimerFolder.keys().forEach((image) => {
+  const img = new Image();
+  const src = ActivityTimerFolder(image);
+  img.src = src;
   ActivityTimerImages.push({
-    src: ActivityTimerFolder(image),
+    image: img,
     caption: '',
     altText: '',
   });
 });
 AutoAppletFolder.keys().forEach((image) => {
+  const img = new Image();
+  const src = AutoAppletFolder(image);
+  img.src = src;
   AutoAppletImages.push({
-    src: AutoAppletFolder(image),
+    image: img,
     caption: '',
     altText: '',
   });
 });
 
 FakeDataGeneratorFolder.keys().forEach((image) => {
+  const img = new Image();
+  const src = FakeDataGeneratorFolder(image);
+  img.src = src;
   FakeDataGeneratorImages.push({
-    src: FakeDataGeneratorFolder(image),
+    image: img,
     caption: '',
     altText: '',
   });
 });
 
 WebsiteFolder.keys().forEach((image) => {
+  const img = new Image();
+  const src = WebsiteFolder(image);
+  img.src = src;
   WebsiteImages.push({
-    src: WebsiteFolder(image),
+    image: img,
     caption: '',
     altText: '',
   });

@@ -20,16 +20,16 @@ export default class Gallery extends React.Component {
 
   renderGallery() {
     const { images } = this.props;
-    return images.map((image, i) => (
+    return images.map((imageProps, i) => (
       <div
         role="button"
         tabIndex={-1}
         className="col-4 col-md-4 col-lg-3"
-        key={image.src}
+        key={imageProps.image.src}
         onKeyDown={() => this.handleClickImage(i)}
         onClick={() => this.handleClickImage(i)}
       >
-        <img src={image.src} className="gallery-item" alt="gallery-item" />
+        <img src={imageProps.image.src} className="gallery-item" alt="gallery-item" />
       </div>
     ));
   }
@@ -42,9 +42,9 @@ export default class Gallery extends React.Component {
         {this.renderGallery()}
         {isOpen && (
           <Lightbox
-            mainSrc={images[photoIndex].src}
-            nextSrc={images[(photoIndex + 1) % images.length].src}
-            prevSrc={images[(photoIndex + images.length - 1) % images.length].src}
+            mainSrc={images[photoIndex].image.src}
+            nextSrc={images[(photoIndex + 1) % images.length].image.src}
+            prevSrc={images[(photoIndex + images.length - 1) % images.length].image.src}
             onCloseRequest={() => this.setState({ isOpen: false }, changeLightBoxStatus())}
             onMovePrevRequest={() =>
               this.setState({
