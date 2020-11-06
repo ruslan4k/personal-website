@@ -115,7 +115,7 @@
   }
 
   // Header Fixed
-  &.header--fixed {
+  &.header {
     position: absolute;
     top: 0;
     z-index: 999;
@@ -255,6 +255,7 @@
 }
 
 .header-right {
+  z-index: 99;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -275,35 +276,20 @@
       }
       ul {
         &.mainmenu {
-          @media #{$md-layout} {
-            width: 60vw;
+          @media #{$md-layout}, #{$sm-layout} {
+            width: 100vw;
             height: 100vh;
             position: fixed;
             top: 0;
-            right: -61vw;
+            right: -101vw;
             z-index: 99;
-            padding: 55px;
             background: #ffffff;
-            -webkit-transition: all 0.8s cubic-bezier(0.77, 0.2, 0.05, 1);
-            -o-transition: all 0.8s cubic-bezier(0.77, 0.2, 0.05, 1);
-            transition: all 0.8s cubic-bezier(0.77, 0.2, 0.05, 1);
+            -webkit-transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+            -o-transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+            transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
             display: block;
             overflow-y: auto;
-          }
-          @media #{$sm-layout} {
-            width: 60vw;
-            height: 100vh;
-            position: fixed;
-            top: 0;
-            right: -61vw;
-            z-index: 99;
-            padding: 55px;
-            background: #ffffff;
-            -webkit-transition: all 0.8s cubic-bezier(0.77, 0.2, 0.05, 1);
-            -o-transition: all 0.8s cubic-bezier(0.77, 0.2, 0.05, 1);
-            transition: all 0.8s cubic-bezier(0.77, 0.2, 0.05, 1);
-            display: block;
-            overflow-y: auto;
+            padding: 105px 55px 55px 55px;
           }
 
           li {
@@ -482,8 +468,7 @@
               right: 0;
             }
             @media #{$large-mobile} {
-              width: 86vw;
-              padding: 54px 20px;
+              padding: 105px 20px 20px 20px;
             }
           }
         }
@@ -502,9 +487,6 @@
       .logo {
         a {
           img {
-            @media #{$md-layout} {
-              width: auto;
-            }
             @media #{$sm-layout} {
               width: auto;
             }
@@ -543,9 +525,6 @@
     @media #{$sm-layout} {
       font-size: 28px;
     }
-    @media #{$md-layout} {
-      font-size: 28px;
-    }
   }
 }
 .header-wrapper.menu-open .humburger-menu span {
@@ -559,6 +538,7 @@ Mainmenu Area
 .mainmenunav {
   ul {
     &.mainmenu {
+      text-align: center;
       display: flex;
       justify-content: flex-end;
       @extend %liststyle;

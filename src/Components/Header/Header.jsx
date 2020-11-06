@@ -16,11 +16,17 @@ const Header = () => {
   const [isMenuOpened, setMenuOpened] = useState(false);
   const handleScroll = () => {
     const value = window.scrollY;
-    setSticky(value > 100);
+    setSticky(value > 50);
   };
-  const menuTrigger = () => setMenuOpened(true);
+  const menuTrigger = () => {
+    document.documentElement.classList.add('bodyLocked');
+    setMenuOpened(true);
+  };
 
-  const cLoseMenuTrigger = () => setMenuOpened(false);
+  const cLoseMenuTrigger = () => {
+    setMenuOpened(false);
+    document.documentElement.classList.remove('bodyLocked');
+  };
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
@@ -36,18 +42,20 @@ const Header = () => {
     { key: 'projects', label: 'Projects' },
     { key: 'contact', label: 'Contact' },
   ];
+
+  const isStickyHeader = isSticky || isMenuOpened;
   return (
-    <header className={cn('header-area header-style-two header--fixed', { sticky: isSticky })}>
+    <header className={cn('header-area header-style-two header', { sticky: isStickyHeader })}>
       <div className={cn('header-wrapper', { 'menu-open': isMenuOpened })}>
         <div
           className={cn('header-left d-flex align-items-center', {
-            'color-black': isSticky,
+            'color-black': isStickyHeader,
           })}
         >
           <nav className="mainmenunav d-lg-block ml--50">
             <Scrollspy
               className={cn('mainmenu', {
-                'color-black': isSticky,
+                'color-black': isStickyHeader,
               })}
               items={links.map((link) => link.key)}
               currentClassName="is-current"
@@ -67,7 +75,7 @@ const Header = () => {
           <div className="social-share-inner">
             <ul
               className={cn('social-share social-style--2 d-flex justify-content-start liststyle', {
-                'color-black': isSticky,
+                'color-black': isSticky || isMenuOpened,
               })}
             >
               {socialShareIcons.map((val) => (
