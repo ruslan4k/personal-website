@@ -1,5 +1,5 @@
 import React from 'react';
-import './ContactIcons.css';
+import './ContactIcons.scss';
 import { AiOutlineCodepenCircle, AiOutlineLinkedin, AiOutlineGithub } from 'react-icons/ai';
 import { GITHUB_LINK, LINKEDIN_LINK, CODEPEN_LINK } from '../../constants/socialLinks';
 

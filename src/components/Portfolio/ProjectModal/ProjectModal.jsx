@@ -1,7 +1,7 @@
 /* eslint-disable react/forbid-prop-types */
 import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-import './ProjectModal.css';
+import './ProjectModal.scss';
 import { bool, func, object } from 'prop-types';
 import Gallery from '../Gallery/Gallery';
 

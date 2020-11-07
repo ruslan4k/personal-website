@@ -103,7 +103,7 @@ const ContactMe = () => {
                     </FormGroup>
                     <button
                       disabled={isLoading}
-                      className="rn-button-style--2 btn-solid"
+                      className="rn-button-style btn-solid"
                       type="submit"
                       value="submit"
                       name="submit"

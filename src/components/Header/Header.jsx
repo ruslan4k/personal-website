@@ -45,7 +45,7 @@ const Header = () => {
 
   const isStickyHeader = isSticky || isMenuOpened;
   return (
-    <header className={cn('header-area header-style-two header', { sticky: isStickyHeader })}>
+    <header className={cn('header-area header', { sticky: isStickyHeader })}>
       <div className={cn('header-wrapper', { 'menu-open': isMenuOpened })}>
         <div
           className={cn('header-left d-flex align-items-center', {

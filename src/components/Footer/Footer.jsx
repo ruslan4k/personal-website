@@ -9,7 +9,7 @@ const socialShareIcons = [
   { icon: <FaCodepen />, link: CODEPEN_LINK },
 ];
 
-const FooterTwo = () => (
+const Footer = () => (
   <div className="footer-style ptb--30 bg_image bg_image--1" data-black-overlay="6">
     <div className="wrapper plr--50 plr_sm--20">
       <div className="row align-items-center justify-content-between">
@@ -46,4 +46,4 @@ const FooterTwo = () => (
     </div>
   </div>
 );
-export default FooterTwo;
+export default Footer;

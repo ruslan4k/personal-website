@@ -145,7 +145,7 @@
     }
   }
 
-  &.portfolio-interior-design {
+  &.portfolio-section {
     .thumbnail {
       &.image-1 {
         background-image: url(../../assets/images/projects/fakeDataGenerator/4.jpg);
@@ -245,9 +245,6 @@
       margin-right: 10px;
     }
   }
-}
-
-.portfolio-carousel-inner {
   .slick-slide {
     padding-left: 15px;
     padding-right: 15px;
@@ -461,7 +458,6 @@ button {
     font-size: 14px;
     position: relative;
     z-index: 2;
-    // font-family: Montserrat;
     color: $theme-color;
     letter-spacing: 0.2px;
     @extend %transition;
@@ -471,13 +467,6 @@ button {
       transform: translateY(-3px);
       color: #ffffff;
       background: $theme-color;
-    }
-    &.btn-white {
-      border: 2px solid #ffffff;
-      color: #ffffff;
-      &:hover {
-        border-color: $theme-color;
-      }
     }
   }
 }

@@ -32,7 +32,7 @@ export default function Banner() {
         <div className="banner">
           <div className="d-inline-flex flex-column justify-content-center align-items-center">
             <h2>Ruslan Khametov</h2>
-            <div className="testsa">
+            <div className="textLoopsSkills">
               <TextLoop className="theme-color text-loop">
                 <span>Full Stack</span>
                 <span>Javascript</span>

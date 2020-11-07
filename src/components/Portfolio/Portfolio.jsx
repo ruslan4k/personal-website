@@ -142,7 +142,7 @@ const Portfolio = () => {
               <div
                 tabIndex={-1}
                 role="button"
-                className="portfolio portfolio-interior-design"
+                className="portfolio portfolio-section"
                 key={projectItem.image}
                 onKeyDown={() => handleClickProject(projectItem)}
                 onClick={() => handleClickProject(projectItem)}
