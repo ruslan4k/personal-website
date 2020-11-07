@@ -47,17 +47,17 @@ const Skills = () => (
       </div>
       <div className="row service-one-wrapper">
         {ServiceList.map((val) => (
-          <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12" key={val.title}>
+          <h3 className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12" key={val.title}>
             <div>
               <div className="service service_style">
                 <div className="icon">{val.icon}</div>
                 <div className="content">
-                  <h3 className="title">{val.title}</h3>
+                  <h4 className="title">{val.title}</h4>
                   <p>{val.description}</p>
                 </div>
               </div>
             </div>
-          </div>
+          </h3>
         ))}
       </div>
     </div>

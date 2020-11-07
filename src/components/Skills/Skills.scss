@@ -83,7 +83,8 @@
           }
         }
       }
-      p {
+      p,
+      h4 {
         @extend %transition;
         color: rgba(29, 29, 36, 0.75);
         @media #{$large-mobile} {
@@ -108,7 +109,8 @@
             @extend %textwhite;
           }
         }
-        p {
+        p,
+        h4 {
           @extend %textwhite;
         }
       }

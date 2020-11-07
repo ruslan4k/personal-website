@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react';
 import TextLoop from 'react-text-loop';
 import ContactIcons from '../ContactIcons/ContactIcons';
 import './Banner.scss';
+import videoBackground from '../../assets/videos/skyCamp.mp4';
 
 const skills = ['Full Stack', 'Javascript', 'React.js', 'Node.js', 'SQL', 'NoSQL', 'Firebase'];
 
@@ -27,7 +28,7 @@ export default function Banner() {
           muted
           playsInline
           loop
-          src={`${'/assets/videos/skyCamp.mp4'}`}
+          src={videoBackground}
         />
       </div>
       {isVideoAvailable && (
