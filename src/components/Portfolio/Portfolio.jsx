@@ -12,52 +12,26 @@ const ActivityTimerFolder = require.context('../../assets/images/projects/activi
 const AutoAppletFolder = require.context('../../assets/images/projects/autoApplet/', false, /.*\.png$/);
 const WebsiteFolder = require.context('../../assets/images/projects/website/', false, /.*\.jpg$/);
 const FakeDataGeneratorFolder = require.context('../../assets/images/projects/fakeDataGenerator', false, /.*\.jpg$/);
-const ActivityTimerImages = [];
-const AutoAppletImages = [];
-const FakeDataGeneratorImages = [];
-const WebsiteImages = [];
-ActivityTimerFolder.keys().forEach((image) => {
-  const img = new Image();
-  const src = ActivityTimerFolder(image);
-  img.src = src;
-  ActivityTimerImages.push({
-    image: img,
-    caption: '',
-    altText: '',
-  });
-});
-AutoAppletFolder.keys().forEach((image) => {
-  const img = new Image();
-  const src = AutoAppletFolder(image);
-  img.src = src;
-  AutoAppletImages.push({
-    image: img,
-    caption: '',
-    altText: '',
-  });
-});
 
-FakeDataGeneratorFolder.keys().forEach((image) => {
-  const img = new Image();
-  const src = FakeDataGeneratorFolder(image);
-  img.src = src;
-  FakeDataGeneratorImages.push({
-    image: img,
-    caption: '',
-    altText: '',
+const getImages = (folder) => {
+  const images = [];
+  folder.keys().forEach((image) => {
+    const img = new Image();
+    const src = folder(image);
+    img.src = src;
+    images.push({
+      image: img,
+      caption: '',
+      altText: '',
+    });
   });
-});
+  return images;
+};
 
-WebsiteFolder.keys().forEach((image) => {
-  const img = new Image();
-  const src = WebsiteFolder(image);
-  img.src = src;
-  WebsiteImages.push({
-    image: img,
-    caption: '',
-    altText: '',
-  });
-});
+const ActivityTimerImages = getImages(ActivityTimerFolder);
+const AutoAppletImages = getImages(AutoAppletFolder);
+const FakeDataGeneratorImages = getImages(FakeDataGeneratorFolder);
+const WebsiteImages = getImages(WebsiteFolder);
 
 const projects = [
   {

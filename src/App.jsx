@@ -7,7 +7,6 @@ import Header from './components/Header/Header';
 import MyProjects from './components/Portfolio/Portfolio';
 import ContactMe from './components/ContactMe/ContactMe';
 import Footer from './components/Footer/Footer';
-import './App.css';
 
 const App = () => {
   useEffect(() => {

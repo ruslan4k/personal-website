@@ -4,9 +4,59 @@ import * as yup from 'yup';
 import './ContactMe.scss';
 import { FormGroup, Input, FormFeedback, Form, Spinner } from 'reactstrap';
 import swal from '@sweetalert/with-react';
+import letsContactImage from '../../assets/images/letsContact.png';
+
+const contactFormValidationSchema = yup.object().shape({
+  email: yup.string().email('Email not valid').required('Email is required'),
+  name: yup.string().required('Name is required!'),
+  subject: yup.string().required('Subject is required!'),
+  message: yup.string().required('Message is required!'),
+});
 
 const ContactMe = () => {
   const [isLoading, setLoading] = useState(false);
+  const submitForm = async (values, resetForm) => {
+    try {
+      setLoading(true);
+      await fetch('https://us-central1-fake-data-generator-292318.cloudfunctions.net/contact_form_request', {
+        method: 'POST',
+        body: JSON.stringify(values),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+      resetForm();
+      setLoading(false);
+      swal({ title: 'Success!', text: 'You message has been sent!', icon: 'success' });
+    } catch (error) {
+      setLoading(false);
+      swal({
+        title: 'Failure',
+        text: 'Some Error Occurred. Please, contact me using my social links',
+        icon: 'error',
+      });
+    }
+  };
+
+  const inputItems = (values, touched, errors) => [
+    { type: 'text', name: 'email', placeholder: 'Enter your email', value: values.email, invalid: touched.name && errors.name },
+    { type: 'text', name: 'name', placeholder: 'Enter your Name', value: values.name, invalid: touched.email && errors.email },
+    {
+      type: 'text',
+      name: 'subject',
+      placeholder: 'Write a Subject',
+      value: values.subject,
+      invalid: touched.subject && errors.subject,
+    },
+    {
+      type: 'textarea',
+      name: 'message',
+      placeholder: 'Enter your Message',
+      value: values.message,
+      invalid: touched.message && errors.message,
+    },
+  ];
+
   return (
     <div id="contact" className="contact-form-styles bg_color--5">
       <div className="container">
@@ -23,84 +73,24 @@ const ContactMe = () => {
                   subject: '',
                   message: '',
                 }}
-                validationSchema={yup.object().shape({
-                  email: yup.string().email('Email not valid').required('Email is required'),
-                  name: yup.string().required('Name is required!'),
-                  subject: yup.string().required('Subject is required!'),
-                  message: yup.string().required('Message is required!'),
-                })}
-                onSubmit={async (values, { resetForm }) => {
-                  try {
-                    setLoading(true);
-                    await fetch('https://us-central1-fake-data-generator-292318.cloudfunctions.net/contact_form_request', {
-                      method: 'POST',
-                      body: JSON.stringify(values),
-                      headers: {
-                        'Content-Type': 'application/json',
-                      },
-                    });
-                    resetForm();
-                    setLoading(false);
-                    swal({ title: 'Success!', text: 'You message has been sent!', icon: 'success' });
-                  } catch (error) {
-                    setLoading(false);
-                    swal({
-                      title: 'Failure',
-                      text: 'Some Error Occurred. Please, contact me using my social links',
-                      icon: 'error',
-                    });
-                  }
-                }}
+                validationSchema={contactFormValidationSchema}
+                onSubmit={(values, { resetForm }) => submitForm(values, resetForm)}
                 render={({ errors, touched, handleChange, values, handleSubmit, handleBlur }) => (
                   <Form onSubmit={handleSubmit}>
-                    <FormGroup>
-                      <Input
-                        type="text"
-                        placeholder="Enter your email"
-                        value={values.email}
-                        onChange={handleChange}
-                        name="email"
-                        onBlur={handleBlur}
-                        invalid={touched.email && errors.email}
-                      />
-                      <FormFeedback>{errors.email}</FormFeedback>
-                    </FormGroup>
-                    <FormGroup>
-                      <Input
-                        type="text"
-                        name="name"
-                        onChange={handleChange}
-                        value={values.name}
-                        placeholder="Enter your Name"
-                        onBlur={handleBlur}
-                        invalid={touched.name && errors.name}
-                      />
-                      <FormFeedback>{errors.name}</FormFeedback>
-                    </FormGroup>
-                    <FormGroup>
-                      <Input
-                        type="text"
-                        name="subject"
-                        onChange={handleChange}
-                        value={values.subject}
-                        placeholder="Write a Subject"
-                        onBlur={handleBlur}
-                        invalid={touched.subject && errors.subject}
-                      />
-                      <FormFeedback>{errors.subject}</FormFeedback>
-                    </FormGroup>
-                    <FormGroup>
-                      <Input
-                        type="textarea"
-                        name="message"
-                        placeholder="Enter your Message"
-                        onChange={handleChange}
-                        value={values.message}
-                        onBlur={handleBlur}
-                        invalid={touched.message && errors.message}
-                      />
-                      <FormFeedback>{errors.message}</FormFeedback>
-                    </FormGroup>
+                    {inputItems(values, touched, errors).map(({ type, name, invalid, value, placeholder }) => (
+                      <FormGroup key={name}>
+                        <Input
+                          type={type}
+                          placeholder={placeholder}
+                          value={value}
+                          onChange={handleChange}
+                          name={name}
+                          onBlur={handleBlur}
+                          invalid={invalid}
+                        />
+                        <FormFeedback>{errors.email}</FormFeedback>
+                      </FormGroup>
+                    ))}
                     <button
                       disabled={isLoading}
                       className="rn-button-style btn-solid"
@@ -121,7 +111,7 @@ const ContactMe = () => {
           </div>
           <div className="col-lg-6 order-1 order-lg-2">
             <div className="thumbnail mb_md--30 mb_sm--30">
-              <img src="/assets/images/letsContact.png" alt="illustration" />
+              <img src={letsContactImage} alt="illustration" />
             </div>
           </div>
         </div>

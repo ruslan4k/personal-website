@@ -115,9 +115,11 @@ a.btn-navbar:active {
   background-color: #0044cc;
 }
 
-#theme_options2 img {
-  border: 1px solid #eee;
-  margin: 10px 0;
-  max-width: 100%;
-  padding: 10px;
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

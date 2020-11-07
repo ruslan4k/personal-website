@@ -3,6 +3,8 @@ import TextLoop from 'react-text-loop';
 import ContactIcons from '../ContactIcons/ContactIcons';
 import './Banner.scss';
 
+const skills = ['Full Stack', 'Javascript', 'React.js', 'Node.js', 'SQL', 'NoSQL', 'Firebase'];
+
 export default function Banner() {
   const videoRef = useRef(null);
   const setPlayBack = () => {
@@ -34,13 +36,9 @@ export default function Banner() {
             <h2>Ruslan Khametov</h2>
             <div className="textLoopsSkills">
               <TextLoop className="theme-color text-loop">
-                <span>Full Stack</span>
-                <span>Javascript</span>
-                <span>React.js</span>
-                <span>Node.js</span>
-                <span>SQL</span>
-                <span>NoSQL</span>
-                <span>Firebase</span>
+                {skills.map((skillItem) => (
+                  <span key={skillItem}>{skillItem}</span>
+                ))}
               </TextLoop>
             </div>
 

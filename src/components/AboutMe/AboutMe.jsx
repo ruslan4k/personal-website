@@ -32,27 +32,24 @@ const AboutMe = () => {
                   <div className="single-tab-content">
                     <ul>
                       <li>
-                        <a>
-                          Full Stack Engineer
+                        <h3>
+                          Full Stack Engineer&nbsp;
                           <span> - Wizer</span>
-                        </a>
-{' '}
+                        </h3>
                         FEB 2019 - PRESENT TIME
                       </li>
                       <li>
-                        <a>
-                          Full Stack Engineer
+                        <h3>
+                          Full Stack Engineer&nbsp;
                           <span> - Easier Chef (SpaceStep agency)</span>
-                        </a>
-{' '}
+                        </h3>
                         MAY 2019 - JUNE 2019
                       </li>
                       <li>
-                        <a>
-                          Full Stack Engineer
+                        <h3>
+                          Full Stack Engineer&nbsp;
                           <span> - Tabnex (SpaceStep agency)</span>
-                        </a>
-{' '}
+                        </h3>
                         AUG 2018 - FEB 2019
                       </li>
                     </ul>
@@ -63,12 +60,11 @@ const AboutMe = () => {
                   <div className="single-tab-content">
                     <ul>
                       <li>
-                        <a>
+                        <h3>
                           BSc In Mechanical Engineering
                           <span> - Ufa State Petroleum Technological University</span>
-                        </a>
-{' '}
-                        2011 - 2015
+                        </h3>
+                        &nbsp;2011 - 2015
                       </li>
                     </ul>
                   </div>
