@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react';
+import * as Sentry from '@sentry/react';
+
 import ReactGA from 'react-ga';
 import Banner from './components/Banner/Banner';
 import Skills from './components/Skills/Skills';
@@ -12,6 +14,7 @@ const App = () => {
   useEffect(() => {
     ReactGA.initialize('UA-181281293-1');
     ReactGA.pageview(window.location.pathname + window.location.search);
+    Sentry.captureMessage('Page Load', 'info');
   }, []);
   return (
     <div>
