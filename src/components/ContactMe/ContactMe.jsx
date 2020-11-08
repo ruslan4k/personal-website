@@ -39,14 +39,29 @@ const ContactMe = () => {
   };
 
   const inputItems = (values, touched, errors) => [
-    { type: 'text', name: 'email', placeholder: 'Enter your email', value: values.email, invalid: touched.name && errors.name },
-    { type: 'text', name: 'name', placeholder: 'Enter your Name', value: values.name, invalid: touched.email && errors.email },
+    {
+      type: 'text',
+      name: 'email',
+      placeholder: 'Enter your email',
+      value: values.email,
+      invalid: touched.email && errors.email,
+      errorMessage: errors.email,
+    },
+    {
+      type: 'text',
+      name: 'name',
+      placeholder: 'Enter your Name',
+      value: values.name,
+      invalid: touched.name && errors.name,
+      errorMessage: errors.name,
+    },
     {
       type: 'text',
       name: 'subject',
       placeholder: 'Write a Subject',
       value: values.subject,
       invalid: touched.subject && errors.subject,
+      errorMessage: errors.subject,
     },
     {
       type: 'textarea',
@@ -54,6 +69,7 @@ const ContactMe = () => {
       placeholder: 'Enter your Message',
       value: values.message,
       invalid: touched.message && errors.message,
+      errorMessage: errors.message,
     },
   ];
 
@@ -77,7 +93,7 @@ const ContactMe = () => {
                 onSubmit={(values, { resetForm }) => submitForm(values, resetForm)}
                 render={({ errors, touched, handleChange, values, handleSubmit, handleBlur }) => (
                   <Form onSubmit={handleSubmit}>
-                    {inputItems(values, touched, errors).map(({ type, name, invalid, value, placeholder }) => (
+                    {inputItems(values, touched, errors).map(({ type, name, invalid, value, placeholder, errorMessage }) => (
                       <FormGroup key={name}>
                         <Input
                           type={type}
@@ -88,7 +104,7 @@ const ContactMe = () => {
                           onBlur={handleBlur}
                           invalid={invalid}
                         />
-                        <FormFeedback>{errors.email}</FormFeedback>
+                        <FormFeedback>{errorMessage}</FormFeedback>
                       </FormGroup>
                     ))}
                     <button
