@@ -4,7 +4,8 @@ import './index.scss';
 import * as Sentry from '@sentry/react';
 import { Integrations } from '@sentry/tracing';
 import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import * as serviceWorker from './serviceWorker';
+
 import 'bootstrap/dist/css/bootstrap.css';
 
 if (process.env.REACT_APP_ENV !== 'local') {
@@ -21,4 +22,4 @@ if (process.env.REACT_APP_ENV !== 'local') {
 
 // eslint-disable-next-line react/jsx-filename-extension
 ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+serviceWorker.unregister();
