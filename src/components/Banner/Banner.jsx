@@ -1,4 +1,5 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
+import Particles from 'react-particles-js';
 import TextLoop from 'react-text-loop';
 import ContactIcons from '../ContactIcons/ContactIcons';
 import './Banner.scss';
@@ -11,24 +12,12 @@ export default function Banner() {
   const setPlayBack = () => {
     videoRef.current.playbackRate = 0.7;
   };
-  const [isVideoAvailable, setVideoStatus] = useState(false);
 
   return (
     <div id="home" className="banner-container">
       <div className="video-background">
-        <video
-          preload="none"
-          onCanPlay={setPlayBack}
-          onLoadedData={() => {
-            setVideoStatus(true);
-          }}
-          ref={videoRef}
-          autoPlay
-          muted
-          playsInline
-          loop
-          src={videoBackground}
-        >
+        <Particles />
+        <video preload="none" onCanPlay={setPlayBack} ref={videoRef} autoPlay muted playsInline loop src={videoBackground}>
           <source src={videoBackground} type="video/mp4" />
         </video>
       </div>
