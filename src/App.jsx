@@ -15,6 +15,8 @@ const App = () => {
     ReactGA.initialize('UA-181281293-1');
     ReactGA.pageview(window.location.pathname + window.location.search);
     Sentry.captureMessage('Page Load', 'info');
+    document.getElementsByClassName('fullscreen-loader')[0].classList.add('hidden');
+    document.documentElement.classList.remove('bodyLocked');
   }, []);
   return (
     <div>
