@@ -4,6 +4,7 @@ import * as yup from 'yup';
 import './ContactMe.scss';
 import { FormGroup, Input, FormFeedback, Form, Spinner } from 'reactstrap';
 import swal from '@sweetalert/with-react';
+import * as Sentry from '@sentry/react';
 import letsContactImage from '../../assets/images/letsContact.png';
 
 const contactFormValidationSchema = yup.object().shape({
@@ -17,6 +18,11 @@ const ContactMe = () => {
   const [isLoading, setLoading] = useState(false);
   const submitForm = async (values, resetForm) => {
     try {
+      Sentry.withScope((scope) => {
+        scope.setLevel('info');
+        scope.setExtra('formValues', values);
+        Sentry.captureMessage('submittingContactForm');
+      });
       setLoading(true);
       await fetch('https://us-central1-fake-data-generator-292318.cloudfunctions.net/contact_form_request', {
         method: 'POST',
