@@ -6,7 +6,7 @@ import { bool, func, object } from 'prop-types';
 import Gallery from '../Gallery/Gallery';
 
 const ProjectModal = ({ project, isModalOpen, toggleModalState, changeLightBoxStatus }) => {
-  const { images, title, description, url } = project;
+  const { images, title, description, url, githubUrl } = project;
 
   return (
     <div>
@@ -22,7 +22,12 @@ const ProjectModal = ({ project, isModalOpen, toggleModalState, changeLightBoxSt
               <Button color="primary">Visit Website</Button>
             </a>
           )}
-          <Button color="secondary" onClick={toggleModalState}>
+          {githubUrl && (
+            <a href={githubUrl} target="blank">
+              <Button color="secondary">Github</Button>
+            </a>
+          )}
+          <Button color="info" onClick={toggleModalState}>
             Close
           </Button>
         </ModalFooter>

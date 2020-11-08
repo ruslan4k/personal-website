@@ -44,6 +44,7 @@ const projects = [
     description: 'Generates mock data to test your app. It helps you generate random data in various ways.',
     technologies: 'Node.js, Express.js, MongoDB, React, Redux-Saga, Material UI',
     url: 'https://fakedata.rk-projects.dev/',
+    githubUrl: 'https://github.com/ruslan4k/fake-data-generator',
   },
   {
     image: 'image-4',
@@ -54,6 +55,7 @@ const projects = [
     thumbnail: personalWebsiteImg,
     description: '',
     technologies: 'React.js, Bootstrap, Cloud Functions, GitHub actions',
+    githubUrl: 'https://github.com/ruslan4k/personal-website',
   },
   {
     image: 'image-2',
