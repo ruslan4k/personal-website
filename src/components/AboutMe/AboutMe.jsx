@@ -36,6 +36,9 @@ const AboutMe = () => {
                           Full Stack Engineer&nbsp;
                           <span> - Wizer</span>
                         </h3>
+                        <a target="_blank" rel="noreferrer" className="d-block theme-color" href="https://wizer-training.com">
+                          https://wizer-training.com
+                        </a>
                         FEB 2019 - PRESENT TIME
                       </li>
                       <li>
@@ -43,6 +46,9 @@ const AboutMe = () => {
                           Full Stack Engineer&nbsp;
                           <span> - Easier Chef (SpaceStep agency)</span>
                         </h3>
+                        <a target="_blank" rel="noreferrer" className="d-block theme-color" href="https://easierchef.com">
+                          https://easierchef.com
+                        </a>
                         MAY 2019 - JUNE 2019
                       </li>
                       <li>

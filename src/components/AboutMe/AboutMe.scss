@@ -63,6 +63,12 @@ ul {
   display: flex;
   justify-content: center;
   padding-top: 20px;
+  a {
+    color: $theme-color !important;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
   p {
     font-weight: 300;
     color: #717173;
